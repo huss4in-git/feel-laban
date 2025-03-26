@@ -1,0 +1,62 @@
+import React from 'react';
+import { motion } from "framer-motion";
+import { Linkedin, Mail, Github, Code, Palette, Search, FileText } from 'lucide-react';
+
+const ContactSection = () => {
+
+  return (
+    <div id='contact' className="bg-white text-black"> 
+
+      {/* Contact Section */}
+      <div className="h-[80vh] text-white flex flex-col justify-center px-4 sm:px-8 md:px-16" style={{backgroundColor:'#015de4'}}>
+        <div className="max-w-6xl mx-auto w-full">
+          <h2 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-8">
+            Let's Connect
+          </h2>
+          
+          <div>
+            <p className="text-xl sm:text-2xl mb-6 max-w-2xl">
+              I'm always excited to discuss new projects, creative ideas, or potential collaborations. Whether you're looking to bring a concept to life or just want to say hello, feel free to reach out.
+            </p>
+            
+            <div className="flex space-x-6 items-center">
+              <a 
+                href="https://www.linkedin.com/in/shamilshiraz" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:text-blue-500 transition-colors"
+              >
+                <Linkedin size={40} />
+              </a>
+              <a 
+                href="mailto:shamilshiraz0@gmail.com"
+                className="hover:text-green-500 transition-colors"
+              >
+                <Mail size={40} />
+              </a>
+              <a 
+                href="https://github.com/shamilshiraz" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:text-purple-500 transition-colors"
+              >
+                <Github size={40} />
+              </a>
+              <a 
+                href="/DEV2.pdf" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:text-yellow-500 transition-colors"
+                aria-label="Download CV"
+              >
+                <FileText size={40} />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ContactSection;
