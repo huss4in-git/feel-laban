@@ -6,6 +6,8 @@ import Lenis from 'lenis';
 import Menu from './Components/Menu';
 import Mos from './components/Mos';
 import Example from './Components/Horizontal';
+import MarqueeText from './Components/Marquee';
+import Marquee from './Components/MarqueeText';
 
 function App() {
   useEffect(() => {
@@ -34,7 +36,9 @@ function App() {
         <Navbar />
       </nav>
       <CircleReveal />
+      <MarqueeText/>
       <Menu/>
+      <Marquee/>
       <Example/>
       <Mos/>
     </div>

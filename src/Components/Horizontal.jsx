@@ -2,19 +2,33 @@ import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef } from "react";
 
 export const Example = () => {
+    const targetRef = useRef(null);
+    const { scrollYProgress } = useScroll({
+        target: targetRef,
+        offset: ["start start", "end start"]
+    });
+
+    // Smooth blur transition: 10px (blurred) → 0px (clear)
+    const blurValue = useTransform(scrollYProgress, [0, 1], ["10px", "0px"]);
+
     return (
-        <div 
-            id="projects" 
-            className="min-h-screen bg-no-repeat bg-center" 
-            style={{ 
-                backgroundColor: '#015de4', 
-                backgroundImage: "url('logo1.jpeg')", // Ensure correct path
-                backgroundSize: "cover",  // Ensures full image is visible without cropping
-                backgroundPosition: "center",
-                backgroundAttachment: "fixed" // Keeps the image still while scrolling
-            }}
-        >
-            <HorizontalScrollCarousel />
+        <div id="projects" className="relative min-h-screen" ref={targetRef}>
+            {/* Background image with blur effect */}
+            <motion.div
+                className="absolute inset-0 bg-cover bg-center"
+                style={{
+                    backgroundImage: "url('logo.jpg')", 
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    backgroundAttachment: "fixed",
+                    filter: blurValue.get(), // Use `.get()` for real-time updates
+                }}
+            />
+
+            {/* Content */}
+            <div className="relative z-10 bg-white/10 backdrop-blur-sm min-h-screen">
+                <HorizontalScrollCarousel />
+            </div>
         </div>
     );
 };
@@ -30,7 +44,7 @@ const HorizontalScrollCarousel = () => {
     return (
         <section ref={targetRef} className="relative h-[300vh]">
             <div data-aos="fade-up" className='flex justify-center text-6xl sm:text-8xl pt-20'>
-                <p className="text-white" style={{fontFamily:'ant'}}>MENU</p>
+                <p className="text-[#015de4]" style={{ fontFamily: 'ant' }}>MENU</p>
             </div>
             <div className="sticky top-0 flex h-screen items-center overflow-hidden">
                 <motion.div style={{ x }} className="flex gap-4">

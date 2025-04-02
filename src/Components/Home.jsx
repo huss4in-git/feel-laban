@@ -1,41 +1,32 @@
 import React from "react";
-import { FaPhone, FaWhatsapp, FaInstagram, FaMotorcycle } from "react-icons/fa";
 
-function Hero() {
+const LandingPage = () => {
   return (
-    <div className="relative h-screen w-full flex items-center">
-      {/* Background Image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('../feel5.png')" }}
-      ></div>
-
-      {/* 2x2 Dripping Icons in White Section */}
-      <div className="absolute left-0 md:left-50 w-full md:w-auto flex md:grid md:grid-cols-2 justify-center md:justify-start gap-6">
-        {[
-          { icon: <FaPhone />, link: "tel:+1234567890", label: "call" },
-          { icon: <FaWhatsapp />, link: "https://wa.me/yourwhatsappnumber", label: "whatsapp" },
-          { icon: <FaInstagram />, link: "https://instagram.com/feellaban", label: "instagram" },
-          { icon: <FaMotorcycle />, link: "your-delivery-link-here", label: "delivery" }
-        ].map(({ icon, link, label }, index) => (
-          <div key={index} className="flex flex-col items-center">
-            <a
-              href={link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-40 h-20 flex items-center justify-center bg-[#015de4] rounded-full text-3xl transition-all duration-300 shadow-lg text-white 
-                hover:bg-white hover:text-[#015de4]"
-            >
-              {icon}
-            </a>
-            <span className="mt-2 text-sm font-light text-[#015de4]" style={{ fontFamily: 'ant', fontWeight: '300' }}>
-              {label}
-            </span>
+    <div className="relative w-full h-screen text-[white] overflow-hidden">
+      {/* Hero Section */}
+      <div className="w-full h-full flex justify-center items-center">
+        <div className="relative w-full h-full">
+          {/* Background Shape with Rotation */}
+          <div className="absolute inset-0 flex justify-center items-center translate-y-10">
+            <div className="w-[90%] md:w-[93%] h-[73%] rounded-tl-[200px] rounded-bl-[200px] rounded-br-[200px] overflow-hidden -rotate-3">
+              <video 
+                src="/test3.mp4" 
+                autoPlay 
+                loop 
+                muted 
+                className="w-full h-full object-cover"
+              />
+            </div>
           </div>
-        ))}
+          
+          {/* Overlay Content Moved Below */}
+          <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-center">
+            <h1 className="text-9xl font-extrabold text-[#015de4] -rotate-3" style={{fontFamily:'head'}}>FEEL LABAN</h1>
+          </div>
+        </div>
       </div>
     </div>
   );
-}
+};
 
-export default Hero;
+export default LandingPage;

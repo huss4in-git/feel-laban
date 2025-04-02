@@ -34,3 +34,9 @@ html {
   font-family: 'krish';
   src: url('./fonts/Krisha-Regular.otf');
 }
+
+@font-face {
+  font-family: 'head';
+  src: url('./fonts/HeadingNowTrial-47Extrabold.ttf');
+}
+
