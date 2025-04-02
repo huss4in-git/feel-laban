@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
 import './App.css';
 import CircleReveal from './Components/Circle';
-import Navbar from './components/Nav';
+import Navbar from './Components/Nav';
 import Lenis from 'lenis';
 import Menu from './Components/Menu';
-import Mos from './components/Mos';
+import Mos from './Components/Mos';
 import Example from './Components/Horizontal';
 import MarqueeText from './Components/Marquee';
 import Marquee from './Components/MarqueeText';
