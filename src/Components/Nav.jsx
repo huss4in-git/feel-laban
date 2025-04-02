@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const MagneticButton = ({ children }) => {
@@ -36,15 +36,16 @@ const MagneticButton = ({ children }) => {
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const iconColor = "#015de4";
-  const textClasses = "hover:text-gray-300 px-6 py-4 rounded-md text-2xl font-medium transition-all duration-500 uppercase";
-  const fontStyle = { fontFamily: 'ant' };
+  const textClasses =
+    "hover:text-gray-300 px-6 py-4 rounded-md text-2xl font-medium transition-all duration-500 uppercase";
+  const fontStyle = { fontFamily: "ant" };
 
   return (
     <nav className="fixed top-0 left-0 w-full z-40 transition-all duration-500 bg-transparent">
       <div className="px-4 sm:px-6">
         <div className="flex items-center justify-between h-36">
-          {/* Left - CONTACT */}
-          <div style={fontStyle}>
+          {/* Left - CONTACT (Hidden in Mobile) */}
+          <div className="hidden md:block" style={fontStyle}>
             <MagneticButton>
               <a
                 href="tel:+1234567890"
@@ -56,12 +57,12 @@ const Navbar = () => {
             </MagneticButton>
           </div>
 
-          {/* Center - Logo */}
-          <div className="text-6xl">
+          {/* Center - Logo (Moved slightly left in mobile) */}
+          <div className="text-6xl md:mx-0 mx-[-20px]">
             <img src="/f-logo1.png" alt="Logo" style={{ height: "130px" }} />
           </div>
 
-          {/* Right - MENU */}
+          {/* Right - MENU (Desktop Only) */}
           <div className="hidden md:flex space-x-6 mix-blend-difference" style={fontStyle}>
             <MagneticButton>
               <a
@@ -85,11 +86,15 @@ const Navbar = () => {
       >
         <div className="w-18 h-14 relative flex flex-col justify-center items-center">
           <span
-            className={`w-16 h-[8px] absolute transition-all duration-500 ${isMenuOpen ? 'rotate-45 translate-y-0' : 'translate-y-[-14px]'}`}
+            className={`w-16 h-[8px] absolute transition-all duration-500 ${
+              isMenuOpen ? "rotate-45 translate-y-0" : "translate-y-[-14px]"
+            }`}
             style={{ backgroundColor: iconColor }}
           ></span>
           <span
-            className={`w-16 h-[8px] absolute transition-all duration-500 ${isMenuOpen ? '-rotate-45 translate-y-0' : 'translate-y-[14px]'}`}
+            className={`w-16 h-[8px] absolute transition-all duration-500 ${
+              isMenuOpen ? "-rotate-45 translate-y-0" : "translate-y-[14px]"
+            }`}
             style={{ backgroundColor: iconColor }}
           ></span>
         </div>
