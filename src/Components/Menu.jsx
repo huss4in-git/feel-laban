@@ -20,23 +20,23 @@ const BoldFullScreenText = () => {
       >
         {/* Centered First Line (No Changes) */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-[34vw] md:text-[33vw] uppercase font-black leading-[0.75] md:tracking-[] tracking-[-8px] text-[#015de4] text-center "
-        >
-          TRADITION IN
-        </motion.div>
+  initial={{ opacity: 0, y: 20 }}
+  animate={isInView ? { opacity: 1, y: 0 } : {}}
+  transition={{ duration: 0.6, delay: 0.1 }}
+  className="text-[14vw] md:text-[33vw] uppercase font-thin md:font-black leading-[0.85] tracking-normal md:tracking-[-8px] text-[#015de4] text-center"
+>
+  TRADITION IN
+</motion.div>
 
-        {/* Left-Aligned Second Line (Mobile Fix Only) */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-[33vw] md:text-[33vw] uppercase font-black leading-[0.75] tracking-[px] md:tracking-[] text-[#015de4] pl-6 md:pl-0 md:ml-[54px]"
-        >
-          EVERY BITE
-        </motion.div>
+<motion.div
+  initial={{ opacity: 0, y: 20 }}
+  animate={isInView ? { opacity: 1, y: 0 } : {}}
+  transition={{ duration: 0.6, delay: 0.2 }}
+  className="text-[14vw] md:text-[33vw] uppercase font-thin md:font-black leading-[0.85] tracking-normal md:tracking-[-8px] text-[#015de4] text-center md:text-left md:ml-[54px]"
+>
+  EVERY BITE
+</motion.div>
+
       </motion.div>
     </div>
   );
