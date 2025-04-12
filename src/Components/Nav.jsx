@@ -66,7 +66,7 @@ const Navbar = () => {
           <div className="hidden md:flex space-x-6 mix-blend-difference" style={fontStyle}>
             <MagneticButton>
               <a
-                href="/f-menu.pdf"
+                href="/f-menu1.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={textClasses}
@@ -111,7 +111,7 @@ const Navbar = () => {
             className="fixed top-0 left-0 w-full h-full bg-blue-600 flex flex-col items-center justify-center space-y-8 text-white text-3xl"
             style={fontStyle}
           >
-            <a href="/f-menu.pdf" className="hover:text-gray-300">MENU</a>
+            <a href="/f-menu1.pdf" className="hover:text-gray-300">MENU</a>
             <a href="tel:+1234567890" className="hover:text-gray-300">CONTACT</a>
           </motion.div>
         )}
