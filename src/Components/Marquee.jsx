@@ -20,51 +20,51 @@ const MarqueeText = () => {
         transition={{ ease: "linear", duration: 0.2 }}
       >
         <div className="flex items-center gap-8 rotate-[-5deg] bg-[#015de4] py-3 px-6" style={{fontFamily:'krish'}}>
-          <span className="text-xl font-bold text-white uppercase">
+          <span className="text-xl text-white uppercase">
           Feel Laban
           </span>
-          <span className="text-9xl font-bold text-white uppercase">•</span>
-          <span className="text-9xl font-bold text-white uppercase">
+          <span className="text-9xl text-white uppercase">•</span>
+          <span className="text-9xl text-white uppercase">
           Thick
           </span>
-          <span className="text-9xl font-bold text-white uppercase">•</span>
-          <span className="text-9xl font-bold text-white uppercase">
+          <span className="text-9xl text-white uppercase">•</span>
+          <span className="text-9xl text-white uppercase">
+          Creamy
+          </span>
+          <span className="text-9xl  text-white uppercase">•</span>
+          <span className="text-9xl  text-white uppercase">
+          Dreamy
+          </span>
+          <span className="text-9xl text-white uppercase">•</span>
+          <span className="text-9xl text-white uppercase">
+          Feel Laban
+          </span>
+          <span className="text-9xl text-white uppercase">•</span>
+          <span className="text-9xl text-white uppercase">
+          Thick
+          </span>
+          <span className="text-9xl text-white uppercase">•</span>
+          <span className="text-9xl text-white uppercase">
           Creamy
           </span>
           <span className="text-9xl font-bold text-white uppercase">•</span>
           <span className="text-9xl font-bold text-white uppercase">
           Dreamy
           </span>
-          <span className="text-9xl font-bold text-white uppercase">•</span>
-          <span className="text-9xl font-bold text-white uppercase">
+          <span className="text-9xl text-white uppercase">•</span>
+          <span className="text-9xl text-white uppercase">
           Feel Laban
           </span>
-          <span className="text-9xl font-bold text-white uppercase">•</span>
-          <span className="text-9xl font-bold text-white uppercase">
+          <span className="text-9xl text-white uppercase">•</span>
+          <span className="text-9xl text-white uppercase">
           Thick
           </span>
-          <span className="text-9xl font-bold text-white uppercase">•</span>
-          <span className="text-9xl font-bold text-white uppercase">
+          <span className="text-9xl text-white uppercase">•</span>
+          <span className="text-9xl text-white uppercase">
           Creamy
           </span>
-          <span className="text-9xl font-bold text-white uppercase">•</span>
-          <span className="text-9xl font-bold text-white uppercase">
-          Dreamy
-          </span>
-          <span className="text-9xl font-bold text-white uppercase">•</span>
-          <span className="text-9xl font-bold text-white uppercase">
-          Feel Laban
-          </span>
-          <span className="text-9xl font-bold text-white uppercase">•</span>
-          <span className="text-9xl font-bold text-white uppercase">
-          Thick
-          </span>
-          <span className="text-9xl font-bold text-white uppercase">•</span>
-          <span className="text-9xl font-bold text-white uppercase">
-          Creamy
-          </span>
-          <span className="text-9xl font-bold text-white uppercase">•</span>
-          <span className="text-9xl font-bold text-white uppercase">
+          <span className="text-9xl text-white uppercase">•</span>
+          <span className="text-9xl text-white uppercase">
           Dreamy
           </span>
         </div>

@@ -40,3 +40,10 @@ html {
   src: url('./fonts/HeadingNowTrial-47Extrabold.ttf');
 }
 
+@layer utilities {
+  @media (max-width: 640px) {
+    .mobile-thin {
+      font-weight: 400 !important; /* or 300 for extra thin */
+    }
+  }
+}
