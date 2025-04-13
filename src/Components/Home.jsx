@@ -8,7 +8,7 @@ const LandingPage = () => {
         <div className="relative w-full h-full">
           {/* Background Shape with Rotation */}
           <div className="absolute inset-0 flex justify-center items-center translate-y-10">
-            <div className="w-[90%] md:w-[93%] h-[73%] rounded-tl-[200px] rounded-bl-[200px] rounded-br-[200px] overflow-hidden -rotate-3">
+            <div className="w-[90%] md:w-[93%] h-[74%] rounded-tl-[200px] rounded-bl-[200px] rounded-br-[200px] overflow-hidden -rotate-3">
               <video 
                 src="/test3.mp4" 
                 autoPlay 
@@ -20,7 +20,7 @@ const LandingPage = () => {
           </div>
           
           {/* Overlay Content Moved Below */}
-          <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-center">
+          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-center">
             <h1 className="text-9xl font-extrabold text-[#015de4] -rotate-3" style={{fontFamily:'head'}}>FEEL LABAN</h1>
           </div>
         </div>
