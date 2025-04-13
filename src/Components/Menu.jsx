@@ -23,7 +23,7 @@ const BoldFullScreenText = () => {
   initial={{ opacity: 0, y: 20 }}
   animate={isInView ? { opacity: 1, y: 0 } : {}}
   transition={{ duration: 0.6, delay: 0.1 }}
-  className="text-[14vw] md:text-[33vw] uppercase font-thin md:font-black leading-[0.85] tracking-normal md:tracking-[-8px] text-[#015de4] text-center"
+  className="text-[28vw] md:text-[33vw] uppercase font-thin md:font-black leading-[0.85] tracking-tight md:tracking-[-8px] text-[#015de4] text-center"
 >
   TRADITION IN
 </motion.div>
@@ -32,10 +32,11 @@ const BoldFullScreenText = () => {
   initial={{ opacity: 0, y: 20 }}
   animate={isInView ? { opacity: 1, y: 0 } : {}}
   transition={{ duration: 0.6, delay: 0.2 }}
-  className="text-[14vw] md:text-[33vw] uppercase font-thin md:font-black leading-[0.85] tracking-normal md:tracking-[-8px] text-[#015de4] text-center md:text-left md:ml-[54px]"
+  className="text-[28vw] md:text-[33vw] uppercase font-thin md:font-black leading-[0.85] tracking-tight md:tracking-[-8px] text-[#015de4] text-center md:text-left md:ml-[54px]"
 >
   EVERY BITE
 </motion.div>
+
 
       </motion.div>
     </div>
