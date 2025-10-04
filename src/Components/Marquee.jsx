@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import './Marquee.css';
 
 const MarqueeText = () => {
   const [scrollX, setScrollX] = useState(0);
@@ -13,14 +14,14 @@ const MarqueeText = () => {
   }, []);
 
   return (
-    <div className="relative overflow-hidden w-full bg-white py-50">
+    <div className="relative overflow-hidden w-full py-50" style={{backgroundColor:'#faf9f6'}}>
       <motion.div
-        className="absolute whitespace-nowrap top-[20px]"
+        className="absolute whitespace-nowrap top-[30px]"
         animate={{ x: -scrollX }}
         transition={{ ease: "linear", duration: 0.2 }}
       >
-        <div className="flex items-center gap-8 rotate-[-5deg] bg-[#015de4] py-3 px-6" style={{fontFamily:'krish'}}>
-          <span className="text-xl text-white uppercase">
+        <div className="flex items-center gap-8 rotate-[-5deg] bg-[#015de4] py-3 px-5" style={{fontFamily:'krish'}}>
+          <span className="text-9xl text-white uppercase">
           Feel Laban
           </span>
           <span className="text-9xl text-white uppercase">•</span>

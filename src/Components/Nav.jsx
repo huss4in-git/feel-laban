@@ -1,123 +1,97 @@
-import React, { useRef, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+'use client';
+import { useEffect, useRef, useState } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
-const MagneticButton = ({ children }) => {
-  const ref = useRef(null);
+export default function AnimatedFeelLabanLogoHero() {
+  const triggerRef = useRef(null);
+  const { scrollY } = useScroll(); // use scrollY for exact value
+  const [isMobile, setIsMobile] = useState(false);
+  const [navbarBg, setNavbarBg] = useState('transparent');
+  const [navbarShadow, setNavbarShadow] = useState('none');
 
-  const handleMouseMove = (e) => {
-    const { current } = ref;
-    if (current) {
-      const { left, top, width, height } = current.getBoundingClientRect();
-      const x = (e.clientX - (left + width / 2)) * 0.35;
-      const y = (e.clientY - (top + height / 2)) * 0.35;
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
-      current.style.transform = `translate(${x}px, ${y}px) scale(1.35)`;
+  // Threshold where logo reaches navbar
+  const logoThreshold = isMobile ? 340 : 240; // tweak this value if needed
+
+useEffect(() => {
+  const updateNavbarBg = () => {
+    if (scrollY.get() >= logoThreshold) {
+      setNavbarBg('#faf9f6'); 
+      setNavbarShadow('0px 2px 10px rgba(0,0,0,0.1)');
+    } else {
+      setNavbarBg('transparent');
+      setNavbarShadow('none');
     }
   };
+  const unsubscribe = scrollY.onChange(updateNavbarBg);
+  return () => unsubscribe();
+}, [scrollY, logoThreshold]);
 
-  const handleMouseLeave = () => {
-    if (ref.current) {
-      ref.current.style.transform = "translate(0px, 0px) scale(1.15)";
-    }
-  };
 
-  return (
-    <motion.div
-      ref={ref}
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
-      className="transition-transform duration-300 ease-out"
-    >
-      {children}
-    </motion.div>
+  const targetScale = isMobile ? 0.2 : 0.095;
+  const scale = useTransform(scrollY, [0, logoThreshold], [1, targetScale]);
+  const y = useTransform(
+    scrollY,
+    [0, logoThreshold],
+    [isMobile ? 400 : 250, isMobile ? -90 : -280]
   );
-};
-
-const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const iconColor = "#015de4";
-  const textClasses =
-    "hover:text-gray-300 px-6 py-4 rounded-md text-2xl font-medium transition-all duration-500 uppercase";
-  const fontStyle = { fontFamily: "ant" };
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-40 transition-all duration-500 bg-transparent">
-      <div className="px-4 sm:px-6">
-        <div className="flex items-center justify-between h-36">
-          {/* Left - CONTACT (Hidden in Mobile) */}
-          <div className="hidden md:block" style={fontStyle}>
-            <MagneticButton>
-              <a
-                href="tel:+1234567890"
-                className={textClasses}
-                style={{ color: iconColor }}
-              >
-                CONTACT
-              </a>
-            </MagneticButton>
-          </div>
+    <div className="relative h-[100vh] w-full" style={{ fontFamily: 're1' }}>
+      {/* Navbar */}
+<div
+  className="fixed top-0 left-0 z-30 w-full flex items-center justify-between px-4 py-3 sm:py-2 pointer-events-auto transition-colors duration-300"
+  style={{
+    backgroundColor: navbarBg,
+    
+  }}
+>
+  <button className="text-[#015de4] text-lg pointer-events-auto">Menu</button>
+  <button
+    className="bg-blue-600 text-white px-5 py-3 rounded-full border border-transparent hover:bg-white hover:text-blue-600 hover:border-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors duration-300"
+  >
+    Contact
+  </button>
+</div>
 
-          {/* Center - Logo (Moved slightly left in mobile) */}
-          <div className="text-6xl md:mx-0 mx-[-20px]">
-            <img src="/f-logo1.png" alt="Logo" style={{ height: "130px" }} />
-          </div>
 
-          {/* Right - MENU (Desktop Only) */}
-          <div className="hidden md:flex space-x-6 mix-blend-difference" style={fontStyle}>
-            <MagneticButton>
-              <a
-                href="/f-menu1.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={textClasses}
-                style={{ color: iconColor }}
-              >
-                MENU
-              </a>
-            </MagneticButton>
-          </div>
-        </div>
-      </div>
-
-      {/* Mobile MENU Button */}
-      <button
-        className="fixed right-5 top-5 w-32 h-32 rounded-full flex items-center justify-center z-50 md:hidden transition-all duration-500"
-        onClick={() => setIsMenuOpen(!isMenuOpen)}
+      {/* Hero section with product background */}
+      <div
+        ref={triggerRef}
+        className="relative min-h-[100vh] flex items-center justify-center"
+        style={{
+          backgroundImage: "url('/feel-bg.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
       >
-        <div className="w-18 h-14 relative flex flex-col justify-center items-center">
-          <span
-            className={`w-16 h-[8px] absolute transition-all duration-500 ${
-              isMenuOpen ? "rotate-45 translate-y-0" : "translate-y-[-14px]"
-            }`}
-            style={{ backgroundColor: iconColor }}
-          ></span>
-          <span
-            className={`w-16 h-[8px] absolute transition-all duration-500 ${
-              isMenuOpen ? "-rotate-45 translate-y-0" : "translate-y-[14px]"
-            }`}
-            style={{ backgroundColor: iconColor }}
-          ></span>
-        </div>
-      </button>
-
-      {/* Mobile MENU */}
-      <AnimatePresence>
-        {isMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.5 }}
-            className="fixed top-0 left-0 w-full h-full bg-blue-600 flex flex-col items-center justify-center space-y-8 text-white text-3xl"
-            style={fontStyle}
-          >
-            <a href="/f-menu1.pdf" className="hover:text-gray-300">MENU</a>
-            <a href="tel:+1234567890" className="hover:text-gray-300">CONTACT</a>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </nav>
+        {/* Animated "Feel Laban" logo */}
+        <motion.div
+          className="fixed left-1/2 top-8 z-40 flex justify-center items-center"
+          style={{
+            scale,
+            y,
+            translateX: '-50%',
+            width: isMobile ? '82vw' : '55vw',
+            maxWidth: isMobile ? '380px' : '1000px',
+            pointerEvents: 'none',
+          }}
+        >
+          <img
+            src="f-laban.svg"
+            alt="Feel Laban Logo"
+            className="w-full"
+            style={{ userSelect: "none" }}
+            draggable="false"
+          />
+        </motion.div>
+      </div>
+    </div>
   );
-};
-
-export default Navbar;
+}

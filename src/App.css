@@ -1,7 +1,7 @@
 body{
   width: 100vw;
   overflow-x: hidden;
-
+background-color: #F7F5F0;
 }
 body::-webkit-scrollbar{
   display: none;

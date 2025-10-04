@@ -5,6 +5,7 @@ html {
 }
 
 
+
 @font-face {
   font-family: 'ant';
   src: url('./fonts/JTUSjIg69CK48gW7PXoo9WlhyyTh89Y.woff2');
@@ -38,6 +39,16 @@ html {
 @font-face {
   font-family: 'head';
   src: url('./fonts/HeadingNowTrial-47Extrabold.ttf');
+}
+
+@font-face {
+  font-family: 're';
+  src: url('./fonts/re.woff2');
+}
+
+@font-face {
+  font-family: 're1';
+  src: url('./fonts/SuisseIntl.woff2');
 }
 
 @layer utilities {

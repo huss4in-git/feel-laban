@@ -8,6 +8,8 @@ import Mos from './Components/Mos';
 import Example from './Components/Horizontal';
 import MarqueeText from './Components/Marquee';
 import Marquee from './Components/MarqueeText';
+import Stores from './Components/Stores';
+import Socials from './Components/Socials';
 
 function App() {
   useEffect(() => {
@@ -32,14 +34,12 @@ function App() {
 
   return (
     <div className="app-container">
-      <nav className="absolute top-0 left-0 right-0 z-100 w-full">
-        <Navbar />
-      </nav>
-      <CircleReveal />
-      <MarqueeText/>
-      <Menu/>
-      <Marquee/>
+     
+      <Navbar />
       <Example/>
+      <MarqueeText/>
+      <Stores/>
+      <Socials/>
       <Mos/>
     </div>
   );
