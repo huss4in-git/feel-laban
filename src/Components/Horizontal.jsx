@@ -1,4 +1,5 @@
 import React, { useRef, useState, useLayoutEffect } from 'react';
+import './Horizontal.css'; // 👈 contains the no-scrollbar styles
 
 const allProducts = {
     Shakes: [
@@ -35,17 +36,14 @@ function CardSlider() {
         const slider = sliderRef.current;
 
         if (activeCategory === 'Shakes') {
-            // Center the Shakes cards
             slider.scrollTo({
                 left: slider.scrollWidth / 2 - slider.clientWidth / 2,
                 behavior: 'smooth',
             });
         } else {
-            // Start from first card for other categories
             slider.scrollTo({ left: 0, behavior: 'smooth' });
         }
 
-        // Update arrow visibility
         const updateArrows = () => {
             const { scrollLeft, scrollWidth, clientWidth } = slider;
             setCanScrollLeft(scrollLeft > 0);
@@ -67,7 +65,15 @@ function CardSlider() {
     return (
         <div className="w-full bg-[#faf9f6] py-6 sm:py-18">
             {/* Categories */}
-            <div className="flex justify-center items-baseline gap-4 sm:gap-8 mb-6 sm:mb-8 overflow-x-auto whitespace-nowrap px-4">
+            <div
+    className="
+        flex items-baseline gap-4 sm:gap-8 mb-0 sm:mb-8 
+        overflow-x-auto whitespace-nowrap no-scrollbar
+        justify-start sm:justify-center
+        pl-6 sm:pl-0 mt-5 sm:mt-0
+    "
+>
+
                 {categories.map((category) => (
                     <span
                         key={category}
@@ -111,7 +117,7 @@ function CardSlider() {
                 {/* Products */}
                 <div
                     ref={sliderRef}
-                    className={`flex gap-5 overflow-x-auto scroll-smooth pb-4 ${
+                    className={`flex gap-4 overflow-x-auto scroll-smooth pb-4 no-scrollbar ${
                         activeCategory === 'Shakes' ? 'justify-center' : ''
                     }`}
                     style={{ scrollSnapType: 'x mandatory' }}
@@ -122,7 +128,6 @@ function CardSlider() {
                             className="flex flex-col items-start min-w-[340px]"
                             style={{ scrollSnapAlign: 'start' }}
                         >
-                            {/* Card */}
                             <div className="bg-[#e8e6e3] p-20 flex flex-col items-center w-full">
                                 <div className="relative flex justify-center items-center w-full">
                                     <div className="h-60 w-40 flex items-center justify-center rounded-full">
@@ -135,12 +140,10 @@ function CardSlider() {
                                 </div>
                             </div>
 
-                            {/* Product Name */}
                             <div className="text-[#2563eb] font-medium text-xl mt-4">
                                 {product.name}
                             </div>
 
-                            {/* Tags */}
                             <div className="flex gap-2 mt-2 flex-wrap">
                                 {product.tags.map((tag) => (
                                     <span
@@ -153,25 +156,6 @@ function CardSlider() {
                             </div>
                         </div>
                     ))}
-
-  {/* Shop All Button */}
-{activeCategory !== 'Shakes' && (
-    <button
-        className="flex mt-7 flex-col items-center justify-center text-center rounded-full border border-[#2563eb] text-[#2563eb] font-semibold transition-colors duration-300 min-w-[340px] min-h-[300px] hover:bg-[#2563eb] hover:text-white"
-        style={{
-            scrollSnapAlign: 'start',
-            width: '340px',
-            height: '340px',
-        }}
-        onClick={() => alert('Shop All clicked!')}
-    >
-        <span className="text-xl">Shop All</span>
-        <span className="text-xl mt-1">{activeCategory}</span>
-    </button>
-)}
-
-
-
                 </div>
 
                 {/* Right Arrow */}

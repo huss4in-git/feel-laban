@@ -34,7 +34,7 @@ const InstagramSection = () => (
           key={idx}
           target="_blank"
           rel="noopener noreferrer"
-          className="aspect-square bg-[#eee] overflow-hidden block transition-transform hover:scale-105"
+          className="aspect-square bg-[#eee] overflow-hidden block transition-transform "
         >
           <img
             src={post.img}
