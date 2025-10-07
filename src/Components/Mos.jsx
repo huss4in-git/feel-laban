@@ -43,7 +43,7 @@ function Mos() {
              className='h-[10vh] opacity-[0.5]  p-2' alt=""
              />
             </div>
-            <Footer/>
+            
     </div>
     </div>
   )

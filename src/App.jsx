@@ -10,6 +10,7 @@ import MarqueeText from './Components/Marquee';
 import Marquee from './Components/MarqueeText';
 import Stores from './Components/Stores';
 import Socials from './Components/Socials';
+import Footer from './Components/Footer';
 
 function App() {
   useEffect(() => {
@@ -40,7 +41,7 @@ function App() {
       <MarqueeText/>
       <Stores/>
       <Socials/>
-      <Mos/>
+      <Footer/>
     </div>
   );
 }
