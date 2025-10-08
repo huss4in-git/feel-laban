@@ -53,7 +53,7 @@ export default function AnimatedFeelLabanLogoHero() {
   const y = useTransform(
     scrollY,
     [0, logoThreshold],
-    [isMobile ? 300 : 250, isMobile ? -110 : -280]
+    [isMobile ? 440 : 280, isMobile ? -110 : -295]
   );
 
   return (
