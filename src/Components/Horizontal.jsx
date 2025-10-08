@@ -12,11 +12,11 @@ const allProducts = {
         { image: 'test.webp', name: 'Pistachio Nutella', tags: ['Qashtutah'] },
     ],
     Bestsellers: [
-        { image: 'test.webp', name: 'Kabsa', tags: ['Salankatiya'] },
-        { image: 'test.webp', name: 'Creme De La Creme', tags: ['Salankatiya'] },
-        { image: 'test.webp', name: 'Lazy Cat', tags: ['Salankatiya'] },
-        { image: 'test.webp', name: 'Hebba Cake', tags: ['Louah'] },
-        { image: 'test.webp', name: 'Hot Chocolate', tags: ['Drink'] },
+        { image: 'Kabsa.png', name: 'Kabsa', tags: ['Salankatiya'] },
+        { image: 'Creme dela cream.png', name: 'Creme De La Creme', tags: ['Salankatiya'] },
+        { image: 'Lazy Cat.png', name: 'Lazy Cat', tags: ['Salankatiya'] },
+        { image: 'Hebba Cake.png', name: 'Hebba Cake', tags: ['Louah'] },
+        { image: 'Loua - Kinder Pistachio Choclate.png', name: 'Loua - Kinder Pistachio Chocolate', tags: ['Louah'] },
     ],
 };
 
@@ -134,7 +134,7 @@ function CardSlider() {
                                         <img
                                             src={product.image}
                                             alt={product.name}
-                                            className="h-100 w-42 object-cover rounded-full"
+                                            className="h-30 w-45  "
                                         />
                                     </div>
                                 </div>

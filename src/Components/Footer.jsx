@@ -57,15 +57,14 @@ function Footer() {
   return (
     <footer
       ref={footerRef}
-      className="w-full min-h-[100dvh] md:min-h-screen text-white relative"
-      style={{ backgroundColor: brandOrange }}
+      className="w-full min-h-[100dvh] md:min-h-screen text-white relative bg-[#015de4]"
     >
       {/* Full-width wrapper with generous side padding */}
       <div className="w-full max-w-none px-6 sm:px-8 lg:px-12 xl:px-16 2xl:px-24 py-20 lg:py-28">
         <div className="grid grid-cols-12 gap-x-12 gap-y-16">
           {/* Row 1: Logo */}
           <div className="col-span-12 lg:col-span-5">
-            <img src="f-laban.svg" alt="Feel Laban" className="w-40 sm:w-52 lg:w-60" />
+            <img src="Feel Laban - Logo.png" alt="Feel Laban" className="w-40 sm:w-52 lg:w-30" />
           </div>
 
           {/* Row 1: Mission */}
@@ -88,7 +87,7 @@ function Footer() {
                   required
                   className="flex-1 px-4 py-3 text-gray-900 placeholder-gray-500 outline-none"
                 />
-                <button type="submit" className="px-6 py-3 font-medium transition-colors" style={{ color: brandOrange }}>
+                <button type="submit" className="px-6 py-3 font-medium transition-colors text-[#015de4]">
                   Subscribe
                 </button>
               </div>
