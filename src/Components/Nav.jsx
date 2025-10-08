@@ -61,7 +61,7 @@ export default function AnimatedFeelLabanLogoHero() {
       {/* Navbar */}
       <motion.div
         className="site-header fixed top-0 left-0 right-0 z-30 w-full flex items-center justify-between px-5 py-4 sm:py-2 pointer-events-auto transition-all duration-300"
-        style={{ backgroundColor: navbarBg, boxShadow: navbarShadow }}
+        style={{ backgroundColor: navbarBg,  }}
         initial={false}
         animate={{
           y: footerInView ? '-100%' : '0%',

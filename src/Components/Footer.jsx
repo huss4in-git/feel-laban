@@ -17,21 +17,11 @@ const footerLinks = [
     { label: "TikTok", href: "#" },
     { label: "Facebook", href: "#" },
   ],
-  [
-    { label: "club / re_", href: "#" },
-    { label: "Account", href: "#" },
-    { label: "Locations", href: "#" },
-    { label: "Returns", href: "#" },
-    { label: "Privacy", href: "#" },
-    { label: "Terms", href: "#" },
-  ],
 ];
 
 function Footer() {
-  const brandOrange = "#ef4a2e";
   const footerRef = useRef(null);
 
-  // Auto-hide a fixed/sticky header (.site-header) while footer is in view
   useEffect(() => {
     const header = document.querySelector(".site-header");
     if (!footerRef.current || !header) return;
@@ -59,46 +49,57 @@ function Footer() {
       ref={footerRef}
       className="w-full min-h-[100dvh] md:min-h-screen text-white relative bg-[#015de4]"
     >
-      {/* Full-width wrapper with generous side padding */}
-      <div className="w-full max-w-none px-6 sm:px-8 lg:px-12 xl:px-16 2xl:px-24 py-20 lg:py-28">
-        <div className="grid grid-cols-12 gap-x-12 gap-y-16">
-          {/* Row 1: Logo */}
-          <div className="col-span-12 lg:col-span-5">
-            <img src="Feel Laban - Logo.png" alt="Feel Laban" className="w-40 sm:w-52 lg:w-30" />
+      <div className="w-full max-w-none px-5 sm:px-8 lg:px-12 xl:px-16 2xl:px-24 py-14 sm:py-20 lg:py-28">
+        <div className="grid grid-cols-12 gap-x-6 sm:gap-x-12 gap-y-12 sm:gap-y-16">
+
+          {/* Logo */}
+          <div className="col-span-12 lg:col-span-5 flex justify-center lg:justify-start">
+            <img
+              src="Feel Laban - Logo.png"
+              alt="Feel Laban"
+              className="w-36 sm:w-52 lg:w-40"
+            />
           </div>
 
-          {/* Row 1: Mission */}
-          <div className="col-span-12 lg:col-span-7">
-            <p className="text-xl sm:text-2xl font-light leading-relaxed tracking-tight">
+          {/* Mission text */}
+          <div className="col-span-12 lg:col-span-7 text-left lg:text-left lg:pl-8 px-4">
+            <p className="text-2xl sm:text-3xl font-light leading-snug tracking-tight">
               Tradition in every bite, sweetness in every feel. Indulge in the creamiest laban-based desserts—fresh, creamy, and full of flavor, made with care and quality. Enjoy a taste of heritage with every dessert from Feel Laban.
             </p>
           </div>
 
-          {/* Row 2: Subscribe */}
+          {/* Subscribe */}
           <div className="col-span-12 lg:col-span-5">
-            <h3 className="font-serif text-3xl sm:text-4xl font-light tracking-tight">Let&apos;s Keep in Touch</h3>
-            <p className="mt-2 text-base font-light">Sign-up for 10% off your first online order</p>
+            <h3 className="font-serif text-3xl sm:text-3xl font-light tracking-tight text-left lg:text-left">
+              Let&apos;s Keep in Touch
+            </h3>
+            {/* <p className="mt-2 text-sm sm:text-base font-light text-center lg:text-left">
+              Sign-up for 10% off your first online order
+            </p> */}
 
-            <form className="mt-4 max-w-md" onSubmit={(e) => e.preventDefault()}>
-              <div className="flex w-full bg-white rounded-md overflow-hidden">
+            <form className="mt-4 max-w-xs sm:max-w-md mx-auto lg:mx-0" onSubmit={(e) => e.preventDefault()}>
+              <div className="flex w-full bg-white overflow-hidden">
                 <input
                   type="email"
                   placeholder="Email"
                   required
-                  className="flex-1 px-4 py-3 text-gray-900 placeholder-gray-500 outline-none"
+                  className="flex-1 px-3 py-2 sm:px-5 sm:py-4 text-gray-900 placeholder-gray-500 outline-none text-sm sm:text-lg"
                 />
-                <button type="submit" className="px-6 py-3 font-medium transition-colors text-[#015de4]">
+                <button
+                  type="submit"
+                  className="px-4 sm:px-6 py-2 sm:py-4 font-medium transition-colors text-[#015de4] text-sm sm:text-lg"
+                >
                   Subscribe
                 </button>
               </div>
             </form>
           </div>
 
-          {/* Row 2: Link columns */}
-          <div className="col-span-12 lg:col-span-7">
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 lg:gap-12">
+          {/* Footer links */}
+          <div className="col-span-12 lg:col-span-7 lg:pl-8 px-4">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 sm:gap-8 lg:gap-12 text-left">
               {footerLinks.map((group, i) => (
-                <ul key={i} className="space-y-3 text-base font-light">
+                <ul key={i} className="space-y-2 sm:space-y-3 text-2sm sm:text-base font-light">
                   {group.map((link) => (
                     <li key={link.label}>
                       <a href={link.href} className="hover:underline">
@@ -113,9 +114,10 @@ function Footer() {
         </div>
 
         {/* Bottom line */}
-        <div className="mt-16 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-8">
-          <img src="/badges/green-business.svg" alt="Green Business Network" className="h-10 w-auto" />
-          <p className="text-sm opacity-90">© 2025 Feel Laban. All rights reserved.</p>
+        <div className="mt-12 sm:mt-45 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+          <p className="text-xs sm:text-sm opacity-90 text-left">
+            © 2025 Feel Laban. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
