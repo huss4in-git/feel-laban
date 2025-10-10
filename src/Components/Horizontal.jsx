@@ -3,9 +3,10 @@ import './Horizontal.css'; // 👈 contains the no-scrollbar styles
 
 const allProducts = {
     Shakes: [
-        { image: 'test.webp', name: 'Nutella', tags: ['Shake'] },
-        { image: 'test.webp', name: 'Pistachio', tags: ['Shake'] },
-        { image: 'test.webp', name: 'Lotus', tags: ['Shake'] },
+        { image: 'Feel Laban (Pamphlet Design - Page (2) 2.png', name: 'Nutella', tags: ['Shake'] },
+        { image: 'Feel Laban (Pamphlet Design - Page (1).png', name: 'Pistachio', tags: ['Shake'] },
+        { image: 'Feel Laban (Pamphlet Design - Page (2) 3.png', name: 'Lotus', tags: ['Shake'] },
+        { image: 'Feel Laban (Pamphlet Design - Page (1) 2.png', name: 'Hot Chocolate', tags: ['Shake'] },
     ],
     'New Arrivals': [
         { image: 'Loua - Kinder Pistachio Choclate.png', name: 'Nutella Pistachio Kinder', tags: ['Louah'] },
@@ -133,17 +134,18 @@ function CardSlider() {
                             className="flex flex-col items-start min-w-[340px]"
                             style={{ scrollSnapAlign: 'start' }}
                         >
-                            <div className="bg-[#e8e6e3] p-20 flex flex-col items-center w-full">
-                                <div className="relative flex justify-center items-center w-full">
-                                    <div className="h-60 w-40 flex items-center justify-center rounded-full">
-                                        <img
-                                            src={product.image}
-                                            alt={product.name}
-                                            className="h-30 w-45  "
-                                        />
-                                    </div>
-                                </div>
-                            </div>
+                           <div className="bg-[#e8e6e3] p-20 flex flex-col items-center w-full">
+  <div className="relative flex justify-center items-center w-full">
+    <div className="h-60 w-40 flex items-center justify-center rounded-full overflow-hidden">
+      <img
+        src={product.image}
+        alt={product.name}
+        className="h-full w-full object-contain"
+      />
+    </div>
+  </div>
+</div>
+
 
                             <div className="text-[#2563eb] font-medium text-xl mt-4">
                                 {product.name}
