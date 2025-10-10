@@ -80,33 +80,14 @@ export default function AnimatedFeelLabanLogoHero() {
   onClick={() => {
     const footer = document.getElementById('site-footer');
     if (footer) {
-      const footerTop = footer.getBoundingClientRect().top + window.scrollY;
-      const startY = window.scrollY;
-      const distance = footerTop - startY;
-      const duration = 1; // 👈 Adjust this value to make it slower (1500 = 1.5s)
-      let startTime = null;
-
-      const easeInOutCubic = (t) =>
-        t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
-
-      const scroll = (timestamp) => {
-        if (!startTime) startTime = timestamp;
-        const elapsed = timestamp - startTime;
-        const progress = Math.min(elapsed / duration, 1);
-        const eased = easeInOutCubic(progress);
-
-        window.scrollTo(0, startY + distance * eased);
-
-        if (elapsed < duration) requestAnimationFrame(scroll);
-      };
-
-      requestAnimationFrame(scroll);
+      footer.scrollIntoView({ behavior: 'smooth' });
     }
   }}
   className="bg-blue-600 text-white text-sm sm:text-base px-4 sm:px-5 py-2.5 sm:py-3 rounded-full border border-transparent hover:bg-[#faf9f6] hover:text-blue-600 hover:border-blue-600 transition-colors duration-300"
-style={{fontFamily:'san'}}>
+>
   Contact
 </button>
+
 
 
       </motion.div>

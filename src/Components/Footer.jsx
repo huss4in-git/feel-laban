@@ -60,12 +60,13 @@ Looking forward to your response.
 Best regards,
 ${email}`;
 
-    // Opens default mail app
+    // Opens default mail app with filled subject & body
     window.location.href = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   };
 
   return (
     <footer
+      id="site-footer" // 👈 Added ID so 'Contact' button can scroll here
       ref={footerRef}
       className="w-full min-h-[100dvh] md:min-h-screen text-white relative bg-[#015de4]"
     >
