@@ -8,23 +8,28 @@ const allProducts = {
         { image: 'test.webp', name: 'Lotus', tags: ['Shake'] },
     ],
     'New Arrivals': [
-        { image: 'test.webp', name: 'Mango', tags: ['Qashtutah'] },
-        { image: 'test.webp', name: 'Pistachio Nutella', tags: ['Qashtutah'] },
+        { image: 'public/Loua - Kinder Pistachio Choclate.png', name: 'Nutella Pistachio Kinder', tags: ['Louah'] },
+        { image: 'public/Loua - Kinder Choclate.png', name: 'Chocolate Kinder', tags: ['Louah'] },
+        { image: 'public/Lazy Cat.png', name: 'Lazy Cat', tags: ['Salankatiya'] },
+        { image: 'public/Kabsa.png', name: 'Kabsa', tags: ['Salankatiya'] },
+        { image: 'public/Creme dela cream.png', name: 'Creme De La Creme', tags: ['Salankatiya'] },
+        { image: 'public/Hebba Cake.png', name: 'Hebba Cake', tags: ['Salankatiya'] },
+        { image: 'public/Al Mazia.png', name: 'Al Mazia', tags: ['Salankatiya'] },
     ],
     Bestsellers: [
-        { image: 'Kabsa.png', name: 'Kabsa', tags: ['Salankatiya'] },
-        { image: 'Creme dela cream.png', name: 'Creme De La Creme', tags: ['Salankatiya'] },
-        { image: 'Lazy Cat.png', name: 'Lazy Cat', tags: ['Salankatiya'] },
-        { image: 'Hebba Cake.png', name: 'Hebba Cake', tags: ['Louah'] },
-        { image: 'Loua - Kinder Pistachio Choclate.png', name: 'Loua - Kinder Pistachio Chocolate', tags: ['Louah'] },
+        { image: 'public/Loptus Pistachio - Koshary.png', name: 'Pistachio Lotus', tags: ['Koshari'] },
+        { image: 'public/Kinder Nutella Koshary.png', name: 'Kinder Nutella', tags: ['Koshari'] },
+        { image: 'public/Bambooza - Pistachio.png', name: 'Pistachio', tags: ['Bambooza'] },
+        { image: 'public/Cheese Bomb.png', name: 'Cheese Bomb', tags: ['Salankatiya'] },
+        { image: 'public/Loua - Kinder Pistachio Choclate.png', name: 'Nutella Pistachio Kinder', tags: ['Louah'] },
     ],
 };
 
-const categories = ['Shakes', 'Bestsellers', 'New Arrivals'];
+const categories = ['Shakes', 'New Arrivals', 'Bestsellers'];
 
 function CardSlider() {
     const sliderRef = useRef(null);
-    const [activeCategory, setActiveCategory] = useState('Bestsellers');
+    const [activeCategory, setActiveCategory] = useState('New Arrivals');
     const [canScrollLeft, setCanScrollLeft] = useState(false);
     const [canScrollRight, setCanScrollRight] = useState(true);
 

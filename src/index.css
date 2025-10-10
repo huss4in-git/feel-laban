@@ -51,6 +51,26 @@ html {
   src: url('./fonts/SuisseIntl.woff2');
 }
 
+@font-face {
+  font-family: 'dms';
+  src: url('./fonts/dms.ttf');
+}
+
+@font-face {
+  font-family: 'smm';
+  src: url('./fonts/smm.ttf');
+}
+
+@font-face {
+  font-family: 'san';
+  src: url('./fonts/NimbusSanL-Reg.otf');
+}
+
+@font-face {
+  font-family: 'sanb';
+  src: url('./fonts/NimbusSanL-Bol.otf');
+}
+
 @layer utilities {
   @media (max-width: 640px) {
     .mobile-thin {

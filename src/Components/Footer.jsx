@@ -60,14 +60,16 @@ Looking forward to your response.
 Best regards,
 ${email}`;
 
-    // Opens default mail app
+    // Opens default mail app with filled subject & body
     window.location.href = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   };
 
   return (
     <footer
+      id="site-footer" // 👈 Added ID so 'Contact' button can scroll here
       ref={footerRef}
       className="w-full min-h-[100dvh] md:min-h-screen text-white relative bg-[#015de4]"
+      style={{fontFamily:'smm'}}
     >
       <div className="w-full max-w-none px-5 sm:px-8 lg:px-12 xl:px-16 2xl:px-24 py-14 sm:py-20 lg:py-28">
         <div className="grid grid-cols-12 gap-x-6 sm:gap-x-12 gap-y-12 sm:gap-y-16">
@@ -136,7 +138,7 @@ ${email}`;
         </div>
 
         {/* Bottom line */}
-        <div className="mt-12 sm:mt-20 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+        <div className="mt-12 sm:mt-40 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
           <p className="text-xs sm:text-sm opacity-90 text-left">
             © 2025 Feel Laban. All rights reserved.
           </p>

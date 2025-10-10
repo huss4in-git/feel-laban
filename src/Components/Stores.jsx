@@ -1,7 +1,7 @@
 import React from "react";
 
 const StoreSections = () => (
-  <div>
+  <div style={{fontFamily:'san'}}>
     {/* Section 1 */}
     <section className="flex flex-col-reverse lg:flex-row items-center min-h-screen bg-[#faf9f6] px-5">
       {/* Text */}
