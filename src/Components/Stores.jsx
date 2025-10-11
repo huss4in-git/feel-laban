@@ -27,7 +27,7 @@ const StoreSections = () => (
       <div className="w-full lg:w-1/2 flex justify-center items-center mb-6 lg:mb-0">
         <div className="overflow-hidden rounded-full h-[30rem] sm:h-[57rem] max-w-[22rem] sm:max-w-[37rem] w-full bg-white flex items-center justify-center">
           <img
-            src="store.jpg"
+            src="store.jpeg"
             alt="Feel Laban Store"
             className="object-cover w-full h-full"
           />

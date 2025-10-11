@@ -38,29 +38,36 @@ function CardSlider() {
 
     useLayoutEffect(() => {
         if (!sliderRef.current) return;
-
         const slider = sliderRef.current;
-
+    
+        const isMobile = window.innerWidth < 640; // sm breakpoint
+    
         if (activeCategory === 'Shakes') {
-            slider.scrollTo({
-                left: slider.scrollWidth / 2 - slider.clientWidth / 2,
-                behavior: 'smooth',
-            });
+            if (isMobile) {
+                // On mobile → scroll to first card (Nutella)
+                slider.scrollTo({ left: 0, behavior: 'smooth' });
+            } else {
+                // On desktop → keep centered
+                slider.scrollTo({
+                    left: slider.scrollWidth / 2 - slider.clientWidth / 2,
+                    behavior: 'smooth',
+                });
+            }
         } else {
             slider.scrollTo({ left: 0, behavior: 'smooth' });
         }
-
+    
         const updateArrows = () => {
             const { scrollLeft, scrollWidth, clientWidth } = slider;
             setCanScrollLeft(scrollLeft > 0);
             setCanScrollRight(scrollLeft + clientWidth < scrollWidth - 1);
         };
-
+    
         updateArrows();
-
         slider.addEventListener('scroll', updateArrows);
         return () => slider.removeEventListener('scroll', updateArrows);
     }, [activeCategory]);
+    
 
     const scroll = (dir) => {
         if (sliderRef.current) {
