@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 
 const StoreSections = () => (
   <div style={{ fontFamily: "san" }}>
@@ -18,9 +19,13 @@ const StoreSections = () => (
           target="_blank"
           rel="noopener noreferrer"
         >
-          <button className="bg-[#faf9f6] text-[#015de4] px-6 sm:px-8 py-2 sm:py-3 text-lg sm:text-2xl font-serif rounded-full border border-[#015de4] transition-colors duration-200 hover:bg-[#015de4] hover:text-white">
-            Contact Now
-          </button>
+          <button
+  onClick={() => window.open("https://www.google.com/maps/search/Feel+Laban", "_blank")}
+  className="bg-[#faf9f6] text-[#015de4] px-6 sm:px-8 py-2 sm:py-3 text-lg sm:text-2xl font-serif rounded-full border border-[#015de4] transition-colors duration-200 hover:bg-[#015de4] hover:text-white"
+>
+  Locations
+</button>
+
         </a>
       </div>
       {/* Image */}
@@ -49,22 +54,26 @@ const StoreSections = () => (
       </div>
       {/* Text */}
       <div className="w-full lg:w-1/2 flex flex-col items-center justify-center text-center py-10 sm:py-14">
-        <h1 className="font-serif text-[#015de4] text-3xl sm:text-5xl md:text-6xl mb-4 sm:mb-5 font-normal">
-          Pop-Up Events
-        </h1>
-        <p className="text-[#015de4] mb-6 sm:mb-9 max-w-xs sm:max-w-md text-sm sm:text-lg">
-          Hosting a party or an event? Our shop is perfect for creating a sweet, memorable experience for your guests.
-        </p>
-        <a
-          href="https://wa.me/917736660688"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <button className="bg-[#faf9f6] text-[#015de4] px-6 sm:px-8 py-2 sm:py-3 text-lg sm:text-2xl font-serif rounded-full border border-[#015de4] transition-colors duration-200 hover:bg-[#015de4] hover:text-white">
-            Book Now
-          </button>
-        </a>
-      </div>
+  <h1 className="font-serif text-[#015de4] text-3xl sm:text-5xl md:text-6xl mb-4 sm:mb-5 font-normal">
+    Franchise Enquiries?
+  </h1>
+  <p className="text-[#015de4] mb-6 sm:mb-9 max-w-xs sm:max-w-md text-sm sm:text-lg">
+    Partner with us and bring our brand to your city. Submit your details to start your franchise journey today.
+  </p>
+
+  <button
+    onClick={() => {
+      const footer = document.getElementById('site-footer');
+      if (footer) {
+        footer.scrollIntoView({ behavior: 'smooth' });
+      }
+    }}
+    className="bg-[#faf9f6] text-[#015de4] px-6 sm:px-8 py-2 sm:py-3 text-lg sm:text-2xl font-serif rounded-full border border-[#015de4] transition-colors duration-200 hover:bg-[#015de4] hover:text-white"
+  >
+    Contact Now
+  </button>
+</div>
+
     </section>
 
     {/* Section 3 */}

@@ -11,6 +11,7 @@ import Stores from './Components/Stores';
 import Socials from './Components/Socials';
 import Footer from './Components/Footer';
 import FMenu from './Pages/FMenu';
+import Franchise from './Pages/Franchise'
 
 function Home() {
   return (
@@ -51,9 +52,9 @@ function App() {
       <Routes>
         {/* 🏠 Home route */}
         <Route path="/" element={<Home />} />
-
         {/* 🍰 Menu page route */}
         <Route path="/menu" element={<FMenu />} />
+        <Route path='/franchise' element={<Franchise/>}/>
       </Routes>
     </Router>
   );

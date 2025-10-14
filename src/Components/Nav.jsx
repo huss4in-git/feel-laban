@@ -103,7 +103,7 @@ export default function AnimatedFeelLabanLogoHero() {
         }}
       >
         {/* Centered Logo */}
-        <motion.div
+        <Link><motion.div
           className="fixed inset-x-0 top-10 z-40 flex justify-center items-center px-5"
           style={{
             scale,
@@ -118,7 +118,7 @@ export default function AnimatedFeelLabanLogoHero() {
             style={{ userSelect: 'none' }}
             draggable="false"
           />
-        </motion.div>
+        </motion.div></Link>
       </div>
     </div>
   );
