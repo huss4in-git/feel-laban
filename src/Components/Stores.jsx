@@ -15,9 +15,6 @@ const StoreSections = () => (
           Our stores in Calicut and Nadapuram are open daily from 2 PM to 1 AM.
         </p>
         <a
-          href="https://wa.me/917736660688"
-          target="_blank"
-          rel="noopener noreferrer"
         >
           <button
   onClick={() => window.open("https://www.google.com/maps/search/Feel+Laban", "_blank")}
