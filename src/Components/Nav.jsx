@@ -97,7 +97,7 @@ export default function AnimatedFeelLabanLogoHero() {
         ref={triggerRef}
         className="relative min-h-[100vh] flex items-center justify-center"
         style={{
-          backgroundImage: "url('/feel-bg.png')",
+          backgroundImage: "url('/f-landing.png')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
