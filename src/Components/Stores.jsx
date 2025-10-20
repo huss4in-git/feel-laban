@@ -1,30 +1,21 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 
 const StoreSections = () => {
   const [showModal, setShowModal] = useState(false);
 
   const locations = [
-    {
-      city: "Calicut – Convent Road, Moonalungal",
-      link: "https://maps.app.goo.gl/cFq6PxngwXKcbxyr8",
-    },
-    {
-      city: "Nadapuram - Kakkemvelli ",
-      link: "https://maps.app.goo.gl/tZZkpxsbsiQmc1bG7",
-    },
-    {
-      city: "Bangalore – Kammanahalli",
-      link: "https://maps.app.goo.gl/Z2LnbcDX9uaCpt6r9",
-    },
-    {
-      city: "Tirur - Ring Road",
-      link: "https://maps.app.goo.gl/1EmnzKDnybuaw7Nj6s",
-    },
-    {
-      city: "Mangalore – Deralakatte (Opp. Yenepoya College)",
-      link: "https://maps.app.goo.gl/NQiZHtm7FgQfmcap8",
-    },
+    { city: "Feel Laban - Payyannur" },
+    { city: "Feel Laban - Coimbatore" },
+    { city: "Feel Laban - Chokli" },
+    { city: "Feel Laban - Vadakara" },
+    { city: "Feel Laban - Kanhangad" },
+    { city: "Feel Laban - Kasargode" },
+    { city: "Feel Laban - Madiwala" },
+    { city: "Feel Laban - Pattambi" },
+    { city: "Feel Laban - Alappuzha" },
+    { city: "Feel Laban - Indira Nagar" },
+    { city: "Feel Laban - Chennai" },
+    { city: "Feel Laban - Koothuparamba" },
   ];
 
   // Lock/unlock scroll when modal opens/closes
@@ -49,14 +40,12 @@ const StoreSections = () => {
             Indulge in creamy laban desserts and sweet treats crafted with love.
             Our stores in Calicut and Nadapuram are open daily from 2 PM to 1 AM.
           </p>
-          <a>
-            <button
-              onClick={() => setShowModal(true)}
-              className="bg-[#faf9f6] text-[#015de4] px-6 sm:px-8 py-2 sm:py-3 text-lg sm:text-2xl font-serif rounded-full border border-[#015de4] transition-colors duration-200 hover:bg-[#015de4] hover:text-white"
-            >
-              Locations
-            </button>
-          </a>
+          <button
+            onClick={() => setShowModal(true)}
+            className="bg-[#faf9f6] text-[#015de4] px-6 sm:px-8 py-2 sm:py-3 text-lg sm:text-2xl font-serif rounded-full border border-[#015de4] transition-colors duration-200 hover:bg-[#015de4] hover:text-white"
+          >
+            Locations
+          </button>
         </div>
         {/* Image */}
         <div className="w-full lg:w-1/2 flex justify-center items-center mb-6 lg:mb-0">
@@ -91,7 +80,6 @@ const StoreSections = () => {
             Partner with us and bring our brand to your city. Submit your details
             to start your franchise journey today.
           </p>
-
           <button
             onClick={() => {
               const footer = document.getElementById("site-footer");
@@ -142,46 +130,47 @@ const StoreSections = () => {
 
       {/* Modal for Locations */}
       {showModal && (
-        <div className="fixed inset-0 flex items-center justify-center backdrop-blur-lg bg-white/10 z-50">
+        <div className="fixed inset-0 flex items-center justify-center backdrop-blur-lg bg-white/10 z-50 p-4">
           <div
             style={{ fontFamily: "san" }}
-            className="bg-white rounded-3xl shadow-xl sm:p-7 p-7 w-11/12 max-w-lg relative flex flex-col items-center"
+            className="bg-white rounded-3xl shadow-xl w-full max-w-lg relative flex flex-col max-h-[90vh]"
           >
-            {/* Logo instead of title */}
-            <img
-              src="f-logo.png" // replace with your logo path
-              alt="Feel Laban Logo"
-              className="w-32 sm:w-36 mb-5 mx-auto"
-            />
+            {/* Logo */}
+            <div className="flex-shrink-0 px-7 pt-7 flex justify-center">
+              <img src="f-logo.png" alt="Feel Laban Logo" className="w-32 sm:w-36" />
+            </div>
 
-<ul className="space-y-4 w-full">
-  {locations.map((loc, index) => (
-    <li
-      key={index}
-      className="flex justify-between items-center border-b pb-2"
-    >
-      <span className="text-[#015de4]">{loc.city}</span>
-      <a
-        href={loc.link}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="bg-[#015de4] text-white px-3 py-1 text-sm rounded-full border border-[#015de4] hover:bg-[#faf9f6] hover:text-[#015de4] transition-colors duration-200"
-      >
-        Map
-      </a>
-    </li>
-  ))}
-</ul>
+            {/* Scrollable list */}
+            <div className="px-7 flex-1 overflow-y-auto py-4">
+              <ul className="space-y-4">
+                {locations.map((loc, index) => (
+                  <li
+                    key={index}
+                    className="flex justify-between items-center border-b pb-2"
+                  >
+                    <span className="text-[#015de4]">{loc.city}</span>
+                    <a
+                      href={loc.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-[#015de4] text-white px-3 py-1 text-sm rounded-full border border-[#015de4] transition-colors duration-200"
+                    >
+                      Opening Soon
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-
-           {/* Close Button */}
-<button
-  onClick={() => setShowModal(false)}
-  className="mt-6 bg-[#015de4] text-white px-6 py-2 rounded-full w-full border border-[#015de4] hover:bg-white hover:text-[#015de4] transition-colors duration-200"
->
-  Close
-</button>
-
+            {/* Close Button */}
+            <div className="flex-shrink-0 px-7 pb-7 w-full">
+              <button
+                onClick={() => setShowModal(false)}
+                className="bg-[#015de4] text-white px-6 py-2 rounded-full w-full border border-[#015de4] hover:bg-white hover:text-[#015de4] transition-colors duration-200"
+              >
+                Close
+              </button>
+            </div>
           </div>
         </div>
       )}

@@ -12,6 +12,7 @@ import Socials from './Components/Socials';
 import Footer from './Components/Footer';
 import FMenu from './Pages/FMenu';
 import Franchise from './Pages/Franchise'
+import Location from './Components/Location';
 
 function Home() {
   return (
@@ -19,6 +20,7 @@ function Home() {
       <Navbar />
       <Example />
       <MarqueeText />
+      <Location/>
       <Stores />
       <Socials />
       <Footer />
