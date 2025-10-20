@@ -6,7 +6,7 @@ const locations = [
     name: "Feel Laban - Calicut",
     address: "Calicut – Convent Road, Moonalungal",
     email: "hello@feellaban.com",
-    phone: "+91 98765 11111",
+    phone: "+91 77366 60688",
     hours: "Open 2:00 PM - 1:00 AM",
     image: "store.jpeg",
     mapEmbed: (
@@ -26,7 +26,7 @@ const locations = [
     name: "Feel Laban - Bangalore",
     address: "Bangalore – Kammanahalli",
     email: "hello@feellaban.com",
-    phone: "+91 98765 11111",
+    phone: "+91 77366 60688",
     hours: "Open 2:00 PM - 1:00 AM",
     image: "store.jpeg",
     mapEmbed: (
@@ -46,7 +46,7 @@ const locations = [
     name: "Feel Laban - Mangalore",
     address: "Belma Village, Deralakatte",
     email: "hello@feellaban.com",
-    phone: "+91 98765 11111",
+    phone: "+91 77366 60688",
     hours: "Open 2:00 PM - 1:00 AM",
     image: "store.jpeg",
     mapEmbed: (
@@ -66,7 +66,7 @@ const locations = [
     name: "Feel Laban - Perumbavoor",
     address: "4F7C+VG3, 683542 ",
     email: "hello@feellaban.com",
-    phone: "+91 98765 11111",
+    phone: "+91 77366 60688",
     hours: "Open 2:00 PM - 1:00 AM",
     image: "store.jpeg",
     mapEmbed: (
@@ -86,7 +86,7 @@ const locations = [
     name: "Feel Laban - Tirur",
     address: "Ring Road, Pan Bazaar",
     email: "hello@feellaban.com",
-    phone: "+91 98765 11111",
+    phone: "+91 77366 60688",
     hours: "Open 2:00 PM - 1:00 AM",
     image: "store.jpeg",
     mapEmbed: (
@@ -106,7 +106,7 @@ const locations = [
     name: "Feel Laban - Nadapuram ",
     address: "Alfa Food Court - Kakkemvelli",
     email: "hello@feellaban.com",
-    phone: "+91 98765 11111",
+    phone: "+91 77366 60688",
     hours: "Open 1:00 PM - 1:00 AM",
     image: "store.jpeg",
     mapEmbed: (
