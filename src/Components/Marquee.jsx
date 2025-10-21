@@ -13,7 +13,7 @@ const MarqueeText = () => {
 
   return (
     <div
-      className="relative overflow-hidden w-full py-22 sm:py-50"
+      className="relative overflow-hidden w-full py-22 sm:py-40"
       style={{ backgroundColor: "#faf9f6" }}
     >
       {/* Single smooth marquee line */}
@@ -24,7 +24,7 @@ const MarqueeText = () => {
           repeat: Infinity,
           repeatType: "loop",
           ease: "linear",
-          duration: 180, // adjust speed (higher = slower)
+          duration: 175, // adjust speed (higher = slower)
         }}
       >
         {/* Original text line */}
@@ -32,7 +32,7 @@ const MarqueeText = () => {
           {textItems.map((text, idx) => (
             <span
               key={idx}
-              className={`text-7xl sm:text-9xl font-semibold text-[#015de4]`}
+              className={`text-8xl sm:text-9xl font-semibold text-[#015de4]`}
               style={{ fontFamily: "san" }}
             >
               {text}

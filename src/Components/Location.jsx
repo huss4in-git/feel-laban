@@ -5,7 +5,7 @@ const locations = [
   {
     name: "Feel Laban - Calicut",
     address: "Calicut – Convent Road, Moonalungal",
-    email: "hello@feellaban.com",
+    email: "feellaban@gmail.com",
     phone: "+91 77366 60688",
     hours: "Open 2:00 PM - 1:00 AM",
     image: "store.jpeg",
@@ -25,7 +25,7 @@ const locations = [
   {
     name: "Feel Laban - Bangalore",
     address: "Bangalore – Kammanahalli",
-    email: "hello@feellaban.com",
+    email: "feellaban@gmail.com",
     phone: "+91 77366 60688",
     hours: "Open 2:00 PM - 1:00 AM",
     image: "store.jpeg",
@@ -45,7 +45,7 @@ const locations = [
   {
     name: "Feel Laban - Mangalore",
     address: "Belma Village, Deralakatte",
-    email: "hello@feellaban.com",
+    email: "feellaban@gmail.com",
     phone: "+91 77366 60688",
     hours: "Open 2:00 PM - 1:00 AM",
     image: "store.jpeg",
@@ -65,7 +65,7 @@ const locations = [
   {
     name: "Feel Laban - Perumbavoor",
     address: "4F7C+VG3, 683542 ",
-    email: "hello@feellaban.com",
+    email: "feellaban@gmail.com",
     phone: "+91 77366 60688",
     hours: "Open 2:00 PM - 1:00 AM",
     image: "store.jpeg",
@@ -85,7 +85,7 @@ const locations = [
   {
     name: "Feel Laban - Tirur",
     address: "Ring Road, Pan Bazaar",
-    email: "hello@feellaban.com",
+    email: "feellaban@gmail.com",
     phone: "+91 77366 60688",
     hours: "Open 2:00 PM - 1:00 AM",
     image: "store.jpeg",
@@ -105,7 +105,7 @@ const locations = [
   {
     name: "Feel Laban - Nadapuram ",
     address: "Alfa Food Court - Kakkemvelli",
-    email: "hello@feellaban.com",
+    email: "feellaban@gmail.com",
     phone: "+91 77366 60688",
     hours: "Open 1:00 PM - 1:00 AM",
     image: "store.jpeg",
@@ -137,7 +137,7 @@ export default function LocationSection() {
       <div className="w-full md:w-1/2 flex flex-col items-start space-y-6">
         {/* Header */}
         <div className="max-w-md">
-          <h2 className="text-4xl md:text-5xl font-serif leading-tight">
+          <h2 className="text-4xl md:text-5xl ms-1 leading-tight">
            Explore Feel Laban
           </h2>
         </div>

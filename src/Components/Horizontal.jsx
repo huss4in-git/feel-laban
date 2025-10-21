@@ -11,17 +11,17 @@ const allProducts = {
     'New Arrivals': [
         { image: 'Loua - Kinder Pistachio Choclate.png', name: 'Nutella Pistachio Kinder', tags: ['Louah'] },
         { image: 'Loua - Kinder Choclate.png', name: 'Chocolate Kinder', tags: ['Louah'] },
-        { image: 'Lazy Cat.png', name: 'Lazy Cat', tags: ['Salankatiya'] },
-        { image: 'Kabsa.png', name: 'Kabsa', tags: ['Salankatiya'] },
-        { image: 'Creme dela cream.png', name: 'Creme De La Creme', tags: ['Salankatiya'] },
-        { image: 'Hebba Cake.png', name: 'Hebba Cake', tags: ['Salankatiya'] },
-        { image: 'Al Mazia.png', name: 'Al Mazia', tags: ['Salankatiya'] },
+        { image: 'Lazy Cat.png', name: 'Lazy Cat', tags: ['Chocolate Dessert'] },
+        { image: 'Kabsa.png', name: 'Kabsa', tags: ['Signature Dessert'] },
+        { image: 'Creme dela cream.png', name: 'Creme De La Creme', tags: ['Layered Cream Dessert'] },
+        { image: 'Hebba Cake.png', name: 'Hebba Cake', tags: ['Signature Dessert'] },
+        { image: 'Al Mazia.png', name: 'Al Mazia', tags: ['Mango Dessert'] },
     ],
     Bestsellers: [
         { image: 'Loptus Pistachio - Koshary.png', name: 'Pistachio Lotus', tags: ['Koshari'] },
         { image: 'Kinder Nutella Koshary.png', name: 'Kinder Nutella', tags: ['Koshari'] },
         { image: 'Bambooza - Pistachio.png', name: 'Pistachio', tags: ['Bambooza'] },
-        { image: 'Cheese Bomb.png', name: 'Cheese Bomb', tags: ['Salankatiya'] },
+        { image: 'Cheese Bomb.png', name: 'Cheese Bomb', tags: ['Special Dessert'] },
         { image: 'Loua - Kinder Pistachio Choclate.png', name: 'Nutella Pistachio Kinder', tags: ['Louah'] },
     ],
 };

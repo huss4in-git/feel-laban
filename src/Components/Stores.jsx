@@ -41,11 +41,13 @@ const StoreSections = () => {
             Our stores in Calicut and Nadapuram are open daily from 2 PM to 1 AM.
           </p>
           <button
-            onClick={() => setShowModal(true)}
-            className="bg-[#faf9f6] text-[#015de4] px-6 sm:px-8 py-2 sm:py-3 text-lg sm:text-2xl font-serif rounded-full border border-[#015de4] transition-colors duration-200 hover:bg-[#015de4] hover:text-white"
-          >
-            Locations
-          </button>
+  id="locations-section"
+  onClick={() => setShowModal(true)}
+  className="bg-[#faf9f6] text-[#015de4] px-6 sm:px-8 py-2 sm:py-3 text-lg sm:text-2xl font-serif rounded-full border border-[#015de4] transition-colors duration-200 hover:bg-[#015de4] hover:text-white"
+>
+  Locations
+</button>
+
         </div>
         {/* Image */}
         <div className="w-full lg:w-1/2 flex justify-center items-center mb-6 lg:mb-0">
