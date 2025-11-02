@@ -38,7 +38,7 @@ const StoreSections = () => {
           </h1>
           <p className="text-[#015de4] mb-6 sm:mb-9 max-w-xs sm:max-w-md text-sm sm:text-lg">
             Indulge in creamy laban desserts and sweet treats crafted with love.
-            Our stores in Calicut and Nadapuram are open daily from 2 PM to 1 AM.
+            Our stores are open daily from 2 PM to 1 AM.
           </p>
           <button
   id="locations-section"

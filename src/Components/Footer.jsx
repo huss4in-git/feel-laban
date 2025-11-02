@@ -49,7 +49,7 @@ function Footer() {
   const handleSubscribe = (e) => {
     e.preventDefault();
 
-    const recipient = "hello@feellaban.com"; // Change to your business email
+    const recipient = "feellaban@gmail.com"; // Change to your business email
     const subject = "Franchise Enquiry – Feel Laban";
     const body = `Feel Laban Team,
 
