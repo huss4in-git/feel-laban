@@ -53,7 +53,7 @@ function Footer() {
     const subject = "Franchise Enquiry – Feel Laban";
     const body = `Feel Laban Team,
 
-I am interested in learning more about the process and requirements for opening a Feel Laban franchise. Please share additional details about investment, location opportunities, and any other relevant information.
+I am interested to know more about the process and requirements for opening a Feel Laban franchise. Please share additional details about investment, location opportunities, and any other relevant information.
 
 Looking forward to your response.
 
