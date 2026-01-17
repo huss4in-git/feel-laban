@@ -9,13 +9,12 @@ const allProducts = {
         { image: 'Feel Laban (Pamphlet Design - Page (1) 2.png', name: 'Hot Chocolate', tags: ['Shake'] },
     ],
     'New Arrivals': [
-        { image: 'Loua - Kinder Pistachio Choclate.png', name: 'Nutella Pistachio Kinder', tags: ['Louah'] },
-        { image: 'Loua - Kinder Choclate.png', name: 'Chocolate Kinder', tags: ['Louah'] },
-        { image: 'Lazy Cat.png', name: 'Lazy Cat', tags: ['Chocolate Dessert'] },
-        { image: 'Kabsa.png', name: 'Kabsa', tags: ['Signature Dessert'] },
-        { image: 'Creme dela cream.png', name: 'Creme De La Creme', tags: ['Layered Cream Dessert'] },
-        { image: 'Hebba Cake.png', name: 'Hebba Cake', tags: ['Signature Dessert'] },
-        { image: 'Al Mazia.png', name: 'Al Mazia', tags: ['Mango Dessert'] },
+        { image: 'De paris.png', name: 'Le Feel De Paris', tags: ['Cake'] },
+        { image: 'Fazea.png', name: 'Fazea Chocola Cake', tags: ['Cake'] },
+        { image: 'Belgium- hebba cake.png', name: 'Belgium Hebba Cake', tags: ['Cake'] },
+        { image: 'Choco- hebba cake.png', name: 'Choco Hebba Cake', tags: ['Cake'] },
+        { image: 'Kinder - hebba cake.png', name: 'Kinder Hebba Cake', tags: ['Cake'] },
+        { image: 'Pista - hebba cake.png', name: 'Pista Hebba Cake', tags: ['Cake'] },
     ],
     Bestsellers: [
         { image: 'Loptus Pistachio - Koshary.png', name: 'Pistachio Lotus', tags: ['Koshari'] },
@@ -23,6 +22,13 @@ const allProducts = {
         { image: 'Bambooza - Pistachio.png', name: 'Pistachio', tags: ['Bambooza'] },
         { image: 'Cheese Bomb.png', name: 'Cheese Bomb', tags: ['Special Dessert'] },
         { image: 'Loua - Kinder Pistachio Choclate.png', name: 'Nutella Pistachio Kinder', tags: ['Louah'] },
+        { image: 'Loua - Kinder Pistachio Choclate.png', name: 'Nutella Pistachio Kinder', tags: ['Louah'] },
+        { image: 'Loua - Kinder Choclate.png', name: 'Chocolate Kinder', tags: ['Louah'] },
+        { image: 'Lazy Cat.png', name: 'Lazy Cat', tags: ['Chocolate Dessert'] },
+        { image: 'Kabsa.png', name: 'Kabsa', tags: ['Signature Dessert'] },
+        { image: 'Creme dela cream.png', name: 'Creme De La Creme', tags: ['Layered Cream Dessert'] },
+        { image: 'Hebba Cake.png', name: 'Hebba Cake', tags: ['Signature Dessert'] },
+        { image: 'Al Mazia.png', name: 'Al Mazia', tags: ['Mango Dessert'] }
     ],
 };
 

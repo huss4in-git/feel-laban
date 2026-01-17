@@ -23,12 +23,12 @@ function FMenu() {
       {isMobile ? (
         <>
           <img
-            src="Menumobile.jpeg"
+            src="New updated menu page 1.jpg"
             alt="Mobile Menu Image 2"
             className="w-full"
           />
           <img
-            src="Feel Laban (Pamphlet Design - Page (2).png"
+            src="New updated menu page 2.jpg"
             alt="Mobile Menu Image 1"
             className="w-full"
           />
