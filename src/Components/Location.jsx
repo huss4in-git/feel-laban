@@ -4,7 +4,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 const locations = [
   {
     name: "Feel Laban - Calicut",
-    address: "Calicut – Convent Road, Moonalungal",
+    address: "Calicut",
     email: "feellaban@gmail.com",
     phone: (
       <a href="tel:+917736660688">
@@ -52,6 +52,30 @@ const locations = [
   },
   {
     name: "Feel Laban - Bangalore",
+    address: "Bangalore – Madiwala",
+    email: "feellaban@gmail.com",
+    phone: (
+      <a href="tel:+917736660688">
+        +91 77366 60688
+      </a>
+    ),
+    hours: "Open 2:00 PM - 12:00 AM",
+    image: "store.jpeg",
+    mapEmbed: (
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.7593525881175!2d77.6129426!3d12.9231826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15cba13900c1%3A0x7884aee38f87077c!2sFeel%20laban%20Madiwala!5e0!3m2!1sen!2sin!4v1769847003704!5m2!1sen!2sin"
+        width="100%"
+        height="100%"
+        style={{ border: 0 }}
+        allowFullScreen=""
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+        title="Feel Laban Bangalore"
+      ></iframe>
+    ),
+  },
+  {
+    name: "Feel Laban - Bangalore",
     address: "Bangalore – AGB Layout",
     email: "feellaban@gmail.com",
     phone: (
@@ -64,6 +88,30 @@ const locations = [
     mapEmbed: (
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.4307793651283!2d77.5054912!3d13.071862699999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae23004fc08557%3A0xb71a06b9ee6cf22f!2sFeel%20Laban%20agb!5e0!3m2!1sen!2sin!4v1769331766190!5m2!1sen!2sin"
+        width="100%"
+        height="100%"
+        style={{ border: 0 }}
+        allowFullScreen=""
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+        title="Feel Laban Bangalore"
+      ></iframe>
+    ),
+  },
+  {
+    name: "Feel Laban - Bangalore",
+    address: "Bangalore – Church Street",
+    email: "feellaban@gmail.com",
+    phone: (
+      <a href="tel:+917090381981">
+        +91 70903 81981
+      </a>
+    ),
+    hours: "Open 12:00 PM - 12:00 AM",
+    image: "store.jpeg",
+    mapEmbed: (
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.951423641749!2d77.6052632!3d12.9749588!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1758503cd4f1%3A0x64f156185da08d0f!2sFeel%20laban%20church%20street!5e0!3m2!1sen!2sin!4v1769847169259!5m2!1sen!2sin"
         width="100%"
         height="100%"
         style={{ border: 0 }}
@@ -124,7 +172,7 @@ const locations = [
   },
   {
     name: "Feel Laban - Mangalore",
-    address: " KMC Road, Attavar, Mangalore",
+    address: " KMC Road, Attavar - Mangalore",
     email: "feellaban@gmail.com",
     phone: (
       <a href="tel:+918296757005">
@@ -315,6 +363,54 @@ const locations = [
     ),
   },
   {
+    name: "Feel Laban - Kannur ",
+    address: "Payyambalam Beach - Kannur",
+    email: "feellaban@gmail.com",
+    phone: (
+      <a href="tel:+917736660688">
+        +91 77366 60688
+      </a>
+    ),
+    hours: "Open 2:00 PM - 12:30 AM",
+    image: "store.jpeg",
+    mapEmbed: (
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3904.4041070247395!2d75.3476499!3d11.876924199999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba43da45323b705%3A0x92c149b7b7122236!2sFeel%20Laban%20Kannur!5e0!3m2!1sen!2sin!4v1769847424096!5m2!1sen!2sin"
+        width="100%"
+        height="100%"
+        style={{ border: 0 }}
+        allowFullScreen=""
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+        title="Feel Laban Kannur"
+      ></iframe>
+    ),
+  },
+  {
+    name: "Feel Laban - Kannur ",
+    address: "Darmashala - Kannur",
+    email: "feellaban@gmail.com",
+    phone: (
+      <a href="tel:+917736660688">
+        +91 77366 60688
+      </a>
+    ),
+    hours: "Open 2:00 PM - 12:30 AM",
+    image: "store.jpeg",
+    mapEmbed: (
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3902.8209585111863!2d75.37462357571778!3d11.986887488245278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba43f003121ddb3%3A0x934608ea132c3534!2sFeel%20Laban!5e0!3m2!1sen!2sin!4v1769847722945!5m2!1sen!2sin"
+        width="100%"
+        height="100%"
+        style={{ border: 0 }}
+        allowFullScreen=""
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+        title="Feel Laban Kannur"
+      ></iframe>
+    ),
+  },
+  {
     name: "Feel Laban - Payyannur ",
     address: "Magnum Mall, Payyanur",
     email: "feellaban@gmail.com",
@@ -406,7 +502,7 @@ const locations = [
         allowFullScreen=""
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
-        title="Feel Laban Chennai"
+        title="Feel Laban Manipal"
       ></iframe>
     ),
   },
