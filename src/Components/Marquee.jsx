@@ -1,53 +1,44 @@
 import { motion } from "framer-motion";
-import "./Marquee.css";
 
 const MarqueeText = () => {
   const textItems = [
-    "feel laban","•", "creamy","•", "dreamy","•",
-    "feel laban","•", "creamy","•", "dreamy","•",
-    "feel laban","•", "creamy","•", "dreamy","•",
-    "feel laban","•", "creamy","•", "dreamy","•",
-    "feel laban","•", "creamy","•", "dreamy","•",
-    "feel laban","•", "creamy","•", "dreamy","•",
+    "feel laban", "•", "creamy", "•", "dreamy", "•",
+    "feel laban", "•", "creamy", "•", "dreamy", "•",
+    "feel laban", "•", "creamy", "•", "dreamy", "•",
+    "feel laban", "•", "creamy", "•", "dreamy", "•",
   ];
 
   return (
-    <div
-      className="relative overflow-hidden w-full py-22 sm:py-40"
-      style={{ backgroundColor: "#faf9f6" }}
-    >
-      {/* Single smooth marquee line */}
+    // Fixed: Ultra-short height for that luxury brand line look. Bordered.
+    <div className="relative overflow-hidden w-full h-[60px] sm:h-[80px] bg-[#faf9f6] flex items-center border-y border-blue-100 z-10">
       <motion.div
-        className="flex whitespace-nowrap top-[50px] absolute"
+        className="flex whitespace-nowrap absolute"
         animate={{ x: ["0%", "-100%"] }}
         transition={{
           repeat: Infinity,
           repeatType: "loop",
           ease: "linear",
-          duration: 175, // adjust speed (higher = slower)
+          duration: 175, 
         }}
       >
-        {/* Original text line */}
-        <div className="flex items-center gap-8 sm:gap-8 py-1 sm:py-3 px-3 sm:px-5">
+        <div className="flex items-center gap-10 px-6">
           {textItems.map((text, idx) => (
             <span
               key={idx}
-              className={`text-8xl sm:text-9xl font-semibold text-[#015de4]`}
-              style={{ fontFamily: "san" }}
+              className="text-4xl sm:text-5xl font-semibold text-[#015de4] tracking-tight"
+              style={{ fontFamily: "sanb" }} // Using NimbusSansL-Bol for a sharp look
             >
               {text}
             </span>
           ))}
         </div>
-
-        {/* Duplicate once for perfect looping */}
-        <div className="flex items-center gap-4 sm:gap-8 py-2 sm:py-3 px-3 sm:px-5">
+        {/* Duplicate */}
+        <div className="flex items-center gap-10 px-6">
           {textItems.map((text, idx) => (
             <span
               key={`dup-${idx}`}
-              className={`text-5xl sm:text-9xl font-semibold text-[#015de4]
-                `}
-              style={{ fontFamily: "san" }}
+              className="text-4xl sm:text-5xl font-semibold text-[#015de4] tracking-tight"
+              style={{ fontFamily: "sanb" }}
             >
               {text}
             </span>

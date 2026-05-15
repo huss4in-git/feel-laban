@@ -1,150 +1,86 @@
-'use client';
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 
-const footerLinks = [
-  [
-    { label: "Our Ethos", href: "#" },
-    { label: "FAQs", href: "#" },
-    { label: "Glossary", href: "#" },
-    { label: "Press", href: "#" },
-    { label: "Careers", href: "#" },
-    { label: "E-Gift Cards", href: "#" },
-  ],
-  [
-    { label: "Blog: The Scoop", href: "#" },
-    { label: "PopUp Shop", href: "#" },
-    { label: "Snack Rack", href: "#" },
-    { label: "Instagram", href: "#" },
-    { label: "TikTok", href: "#" },
-    { label: "Facebook", href: "#" },
-  ],
-];
-
-function Footer() {
-  const footerRef = useRef(null);
-  const [email, setEmail] = useState('');
-
-  useEffect(() => {
-    const header = document.querySelector(".site-header");
-    if (!footerRef.current || !header) return;
-
-    const io = new IntersectionObserver(
-      ([entry]) => {
-        const showFooterOnly = entry.isIntersecting && entry.intersectionRatio >= 0.8;
-        if (showFooterOnly) {
-          header.style.opacity = "0";
-          header.style.pointerEvents = "none";
-        } else {
-          header.style.opacity = "";
-          header.style.pointerEvents = "";
-        }
-      },
-      { threshold: [0, 0.8] }
-    );
-
-    io.observe(footerRef.current);
-    return () => io.disconnect();
-  }, []);
-
-  const handleSubscribe = (e) => {
-    e.preventDefault();
-
-    const recipient = "feellaban@gmail.com"; // Change to your business email
-    const subject = "Franchise Enquiry – Feel Laban";
-    const body = `Feel Laban Team,
-
-I am interested to know more about the process and requirements for opening a Feel Laban franchise. Please share additional details about investment, location opportunities, and any other relevant information.
-
-Looking forward to your response.
-
-Best regards,
-${email}`;
-
-    // Opens default mail app with filled subject & body
-    window.location.href = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-  };
-
+const Footer = () => {
   return (
-    <footer
-      id="site-footer"
-      ref={footerRef}
-      className="w-full min-h-[100dvh] md:min-h-screen text-white relative bg-[#015de4]"
-    >
-      <div className="w-full max-w-none px-5 sm:px-8 lg:px-12 xl:px-16 2xl:px-24 py-14 sm:py-20 lg:py-28">
-        <div className="grid grid-cols-12 gap-x-6 sm:gap-x-12 gap-y-12 sm:gap-y-16">
-
-          {/* Logo */}
-          <div className="col-span-12 lg:col-span-5 flex justify-center lg:justify-start">
-            <img
-              src="Feel Laban - Logo.png"
-              alt="Feel Laban"
-              className="w-36 sm:w-52 lg:w-40"
+    <div className="w-full bg-[#015de4]">
+      {/* Reduced py to 8 to keep the overall footer height tight and compact */}
+      <div className="mx-auto container py-8 xl:px-20 lg:px-12 sm:px-6 px-4">
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          
+          {/* Column 1: Logo & Text packed tightly together */}
+          <div className="flex flex-col items-start">
+            <img 
+              src="Feel Laban - Logo.png" 
+              alt="Feel Laban" 
+              className="w-28 object-contain rounded-md" 
             />
-          </div>
-
-          {/* Mission text */}
-          <div className="col-span-12 lg:col-span-7 text-left lg:text-left lg:pl-8 px-4">
-            <p className="text-2xl sm:text-3xl font-light leading-snug tracking-tight">
-              Tradition in every bite, sweetness in every feel. Indulge in the creamiest laban-based desserts—fresh, creamy, and full of flavor, made with care and quality. Enjoy a taste of heritage with every dessert from Feel Laban.
+            
+            {/* Used -mt-1 and leading-tight to pull the text right up to the logo's edge */}
+            <p className="text-sm leading-tight text-white max-w-[200px] -mt-1">
+              Tradition in every bite, <br />sweetness in every feel
+            </p> 
+            <p className="text-xs leading-none text-white mt-2 opacity-70">
+              © 2026 Feel Laban. All rights reserved.
             </p>
           </div>
 
-          {/* Franchise Enquiry Form */}
-          <div className="col-span-12 lg:col-span-5">
-            <h3 className="font-serif text-3xl sm:text-3xl font-light tracking-tight text-center lg:text-left">
-              For Enquiries
-            </h3>
-
-            <form
-              className="mt-4 max-w-xs sm:max-w-md mx-auto lg:mx-0"
-              onSubmit={handleSubscribe}
-            >
-              <div className="flex w-full bg-white overflow-hidden ">
-                <input
-                  type="email"
-                  placeholder="Your Email"
-                  required
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="flex-1 px-3 py-2 sm:px-5 sm:py-4 text-gray-900 placeholder-gray-500 outline-none text-sm sm:text-lg"
-                />
-                <button
-                  type="submit"
-                  className="px-4 sm:px-6 py-5 sm:py-4 font-medium transition-colors text-[#015de4] text-sm sm:text-lg"
-                >
-                  Submit
-                </button>
-              </div>
-            </form>
-          </div>
-
-          {/* Footer links */}
-          <div className="col-span-12 lg:col-span-7 lg:pl-8 px-4">
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 sm:gap-8 lg:gap-12 text-left">
-              {footerLinks.map((group, i) => (
-                <ul key={i} className="space-y-2 sm:space-y-3 text-sm sm:text-base font-light">
-                  {group.map((link) => (
-                    <li key={link.label}>
-                      <a href={link.href} className="hover:underline">
-                        {link.label}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              ))}
+          {/* Column 2: Company */}
+          <div className="sm:ml-0 lg:ml-4 flex flex-col">
+            <h2 className="text-base font-semibold leading-4 text-white mb-4">Company</h2>
+            {/* All links are inside one space-y-3 container for uniform spacing */}
+            <div className="flex flex-col space-y-3">
+              <a href="#" className="focus:outline-none hover:underline text-sm text-white">Blog</a>
+              <a href="#" className="focus:outline-none hover:underline text-sm text-white">Pricing</a>
+              <a href="#" className="focus:outline-none hover:underline text-sm text-white">About Us</a>
+              <a href="#" className="focus:outline-none hover:underline text-sm text-white">Contact us</a>
             </div>
           </div>
-        </div>
 
-        {/* Bottom line */}
-        <div className="mt-12 sm:mt-40 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-          <p className="text-xs sm:text-sm opacity-90 text-left">
-            © 2025 Feel Laban. All rights reserved.
-          </p>
+          {/* Column 3: Support */}
+          <div className="flex flex-col">
+            <h2 className="text-base font-semibold leading-4 text-white mb-4">Support</h2>
+            {/* All links are inside one space-y-3 container for uniform spacing */}
+            <div className="flex flex-col space-y-3">
+              <a href="#" className="focus:outline-none hover:underline text-sm text-white">Legal policy</a>
+              <a href="#" className="focus:outline-none hover:underline text-sm text-white">Status policy</a>
+              <a href="#" className="focus:outline-none hover:underline text-sm text-white">Privacy policy</a>
+              <a href="#" className="focus:outline-none hover:underline text-sm text-white">Terms of service</a>
+            </div>
+          </div>
+
+          {/* Column 4: Enquiries & Icons */}
+          <div className="flex flex-col">
+            <h2 className="text-base font-semibold leading-4 text-white mb-4">For enquiries</h2>
+            
+            <div className="flex items-center justify-between border border-white bg-white rounded-sm overflow-hidden w-full max-w-[250px]">
+              <input type="email" className="text-sm p-3 w-full focus:outline-none text-[#015de4] placeholder-[#015de4]/70 bg-transparent" placeholder="Enter your email" />
+              <button aria-label="send" className="mr-3 fill-current text-[#015de4] hover:text-blue-800 focus:outline-none">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </button>
+            </div>
+
+            {/* Icons resting naturally below the input box */}
+            <div className="mt-6 flex items-center gap-x-4">
+              <a href="https://www.instagram.com/p/DMo5cA8yg6Q/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener noreferrer" className="w-8 h-8 flex-shrink-0 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center transition-colors text-white">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+              </a>
+              <a href="https://facebook.com/share/14cHVurTvSL/?mibextid=wwXlfr" target="_blank" rel="noopener noreferrer" className="w-8 h-8 flex-shrink-0 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center transition-colors text-white">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+              </a>
+              <a href="https://wa.me/917736660688" target="_blank" rel="noopener noreferrer" className="w-8 h-8 flex-shrink-0 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center transition-colors text-white">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+              </a>
+              <a href="#" className="w-8 h-8 flex-shrink-0 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center transition-colors text-white">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+              </a>
+            </div>
+          </div>
+
         </div>
       </div>
-    </footer>
+    </div>
   );
-}
+};
 
 export default Footer;
