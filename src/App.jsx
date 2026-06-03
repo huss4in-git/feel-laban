@@ -4,6 +4,7 @@ import './App.css';
 
 import CircleReveal from './Components/Circle';
 import Navbar from './Components/Nav';
+import FeaturedMenu from './Components/FeaturedMenu'; // FeaturedMenu handles the ProductCards!
 import Lenis from 'lenis';
 import Example from './Components/Horizontal';
 import MarqueeText from './Components/Marquee';
@@ -20,6 +21,7 @@ function Home() {
       <Navbar />
       <Example />
       <MarqueeText />
+      <FeaturedMenu />  {/* This automatically renders your 3 cards */}
       <Location/>
       <Stores />
       <Socials />

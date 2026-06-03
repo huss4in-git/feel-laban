@@ -1,5 +1,5 @@
 import React from "react";
-import { motion, useInView } from "framer-motion";
+import { useInView } from "framer-motion";
 import { useRef } from "react";
 
 const BoldFullScreenText = () => {
@@ -8,7 +8,7 @@ const BoldFullScreenText = () => {
 
   return (
     <div
-      className="h-screen w-screen flex flex-col justify-center bg-white px-4"
+      className="h-[70vh] w-screen flex flex-col justify-center bg-white px-4"
       style={{ fontFamily: "krish" }}
     >
       <motion.div
@@ -23,7 +23,7 @@ const BoldFullScreenText = () => {
   initial={{ opacity: 0, y: 20 }}
   animate={isInView ? { opacity: 1, y: 0 } : {}}
   transition={{ duration: 0.6, delay: 0.1 }}
-  className="text-[28vw] md:text-[33vw] uppercase font-thin md:font-black leading-[0.85] tracking-tight md:tracking-[-8px] text-[#015de4] text-center"
+  className="text-[22vw] md:text-[18vw] uppercase font-thin md:font-black leading-[0.8] tracking-tight md:tracking-[-8px] text-[#015de4] text-center"
 >
   TRADITION IN
 </motion.div>
@@ -32,7 +32,7 @@ const BoldFullScreenText = () => {
   initial={{ opacity: 0, y: 20 }}
   animate={isInView ? { opacity: 1, y: 0 } : {}}
   transition={{ duration: 0.6, delay: 0.2 }}
-  className="text-[28vw] md:text-[33vw] uppercase font-thin md:font-black leading-[0.85] tracking-tight md:tracking-[-8px] text-[#015de4] text-center md:text-left md:ml-[54px]"
+  className="text-[22vw] md:text-[18vw] uppercase font-thin md:font-black leading-[0.8] tracking-tight md:tracking-[-8px] text-[#015de4] text-center md:text-left md:ml-[10px]"
 >
   EVERY BITE
 </motion.div>

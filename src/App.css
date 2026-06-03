@@ -1,8 +1,22 @@
-body{
+body {
   width: 100vw;
   overflow-x: hidden;
-background-color: #F7F5F0;
+  background-color: #faf9f6;
 }
-body::-webkit-scrollbar{
+
+body::-webkit-scrollbar {
   display: none;
-  }
+}
+
+/* Hide scrollbars for the horizontal sliders */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+* {
+  box-sizing: border-box;
+}

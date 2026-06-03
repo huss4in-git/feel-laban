@@ -78,3 +78,17 @@ html {
     }
   }
 }
+
+/* This ensures sections don't get absurdly wide on ultra-wide monitors */
+.app-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  background-color: #faf9f6;
+}
+
+/* Optional: Slightly reduce global font scale for desktop */
+@media (min-width: 1024px) {
+  html {
+    font-size: 14px; 
+  }
+}
