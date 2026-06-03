@@ -56,7 +56,7 @@ function FMenu() {
       <div className="w-full bg-[#faf9f6] px-6 md:px-16 py-4 flex justify-between items-center border-b border-blue-100 sticky top-0 z-30 shadow-sm">
         <Link to="/" className="text-[#015de4] font-bold flex items-center gap-2 hover:text-blue-800 transition-colors">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
-          <span className="hidden sm:inline">Back to Home</span>
+          <span className="hidden sm:inline">Home</span>
         </Link>
         <img src="/f-logo.png" alt="Feel Laban" className="h-8 md:h-10 object-contain" onError={(e) => e.target.style.display='none'} />
         <div className="w-10 sm:w-28"></div> 
