@@ -43,7 +43,7 @@ export default function FranchiseForm() {
         },
         body: JSON.stringify({
           // Replace this string with the actual key they email you
-          access_key: "a9fab2e6-a32f-41ac-8f53-a2335cbd12a7", 
+          access_key: "aa89a91d-16ef-412e-b5bc-f9712265f910", 
           subject: "New Franchise Enquiry - Feel Laban",
           ...formData
         }),
