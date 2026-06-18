@@ -29,7 +29,10 @@ const locations = [
   // TAMIL NADU
   { name: "Coimbatore Race Course", address: "Gopalapuram", district: "Coimbatore", phone: "9994458591", state: "Tamil Nadu", status: "Working" },
   { name: "Chennai", address: "Valapani / ECR", district: "Chennai", phone: "", state: "Tamil Nadu", status: "Upcoming" },
-  { name: "Puducherry", address: "Karaikal", district: "Karaikal", phone: "", state: "Tamil Nadu", status: "Upcoming" }
+  { name: "Puducherry", address: "Karaikal", district: "Karaikal", phone: "", state: "Tamil Nadu", status: "Upcoming" },
+
+  // TELANGANA
+  { name: "Toli Chowki", address: "Shop 16, My Home Rainbow Apt, Shaikpet Rd", district: "Hyderabad", phone: "", state: "Telangana", status: "Working" }
 ];
 
 export default function LocationSection() {
@@ -59,9 +62,9 @@ export default function LocationSection() {
           OUR LOCATIONS
         </h2>
 
-        {/* Primary Filter: States */}
+        {/* Primary Filter: States (Added Telangana here) */}
         <div className="flex flex-wrap justify-center gap-3 mb-6">
-          {["All", "Kerala", "Karnataka", "Tamil Nadu"].map((state) => (
+          {["All", "Kerala", "Karnataka", "Tamil Nadu", "Telangana"].map((state) => (
             <button
               key={state}
               onClick={() => handleStateChange(state)}

@@ -21,7 +21,7 @@ const Footer = () => {
               Tradition in every bite, <br />sweetness in every feel
             </p> 
             <p className="text-xs leading-none text-white mt-2 opacity-70">
-              © Jigar Rane All rights reserved.
+              © 2026 Feel Laban. All rights reserved.
             </p>
           </div>
 
