@@ -6,7 +6,7 @@ export default function FranchiseForm() {
   const [formData, setFormData] = useState({
     name: "", email: "", phone: "", street: "", state: "", city: "", pincode: "",
     job: "", ownedBusiness: false, beenFranchise: false, businessType: "",
-    businessDesc: "", locationCity: "", locationPref: "", hasCommercialSpace: false,
+    businessDesc: "", budget: "", locationCity: "", locationPref: "", hasCommercialSpace: false,
     shopDesc: "", spaceArea: "", frontage: "", demographics: "",
     agreeCertify: false, agreePromotions: false,
   });
@@ -23,7 +23,7 @@ export default function FranchiseForm() {
     setFormData({
       name: "", email: "", phone: "", street: "", state: "", city: "", pincode: "",
       job: "", ownedBusiness: false, beenFranchise: false, businessType: "",
-      businessDesc: "", locationCity: "", locationPref: "", hasCommercialSpace: false,
+      businessDesc: "", budget: "", locationCity: "", locationPref: "", hasCommercialSpace: false,
       shopDesc: "", spaceArea: "", frontage: "", demographics: "",
       agreeCertify: false, agreePromotions: false,
     });
@@ -93,7 +93,6 @@ export default function FranchiseForm() {
               <option>Kerala</option>
               <option>Karnataka</option>
             </select>
-            <input name="city" value={formData.city} onChange={handleChange} placeholder="City" className="border-2 border-blue-400 rounded-xl p-3 w-full" />
             <input name="pincode" value={formData.pincode} onChange={handleChange} placeholder="Pincode" className="border-2 border-blue-400 rounded-xl p-3 w-full" />
           </div>
 
@@ -115,10 +114,18 @@ export default function FranchiseForm() {
             </label>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
             <input name="businessType" value={formData.businessType} onChange={handleChange} placeholder="If Yes, Then What Type?" className="border-2 border-blue-400 rounded-xl p-3 w-full" />
             <input name="businessDesc" value={formData.businessDesc} onChange={handleChange} placeholder="If Yes, Please Describe" className="border-2 border-blue-400 rounded-xl p-3 w-full" />
           </div>
+
+          <select name="budget" value={formData.budget} onChange={handleChange} className="border-2 border-blue-400 rounded-xl p-3 w-full mb-8">
+            <option value="">What is your investment budget?</option>
+            <option value="₹5–10L">₹5–10L</option>
+            <option value="₹10–20L">₹10–20L</option>
+            <option value="₹20L+">₹20L+</option>
+            <option value="Not sure">Not sure</option>
+          </select>
 
           {/* LOCATION INFORMATION */}
           <h2 className="text-xl font-bold text-blue-500 text-center mb-6">
@@ -151,7 +158,7 @@ export default function FranchiseForm() {
             </label>
             <label className="flex items-center gap-2">
               <input type="checkbox" name="agreePromotions" checked={formData.agreePromotions} onChange={handleChange} className="accent-blue-500" />
-              I agree to receive promotions and newsletters related to Sign Laban.
+              I agree to receive promotions and newsletters related to Feel laban.
             </label>
           </div>
 
