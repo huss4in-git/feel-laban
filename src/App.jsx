@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
-
 import CircleReveal from './Components/Circle';
 import Navbar from './Components/Nav';
 import FeaturedMenu from './Components/FeaturedMenu'; // FeaturedMenu handles the ProductCards!

@@ -58,7 +58,7 @@ function FMenu() {
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
           <span className="hidden sm:inline">Home</span>
         </Link>
-        <img src="/f-logo.png" alt="Feel Laban" className="h-8 md:h-10 object-contain" onError={(e) => e.target.style.display='none'} />
+        <img src="/f-logo.webp" alt="Feel Laban" className="h-8 md:h-10 object-contain" onError={(e) => e.target.style.display='none'} />
         <div className="w-10 sm:w-28"></div> 
       </div>
 
@@ -66,7 +66,7 @@ function FMenu() {
         <div className="max-w-7xl mx-auto">
           
           <div className="w-full mb-12 rounded-[2rem] overflow-hidden shadow-sm border border-blue-100">
-             <img src="/menu.jpg" alt="Feel Laban Categories" className="w-full h-auto object-cover" />
+             <img src="/menu.webp" alt="Feel Laban Categories" className="w-full h-auto object-cover" />
           </div>
 
           <div className="text-center mb-8">
@@ -105,7 +105,7 @@ function FMenu() {
                     className="w-full h-full object-contain drop-shadow-xl group-hover:scale-110 transition-transform duration-500"
                     onError={(e) => { 
                       e.target.onerror = null; 
-                      e.target.src = "/f-logo.png"; 
+                      e.target.src = "/f-logo.webp"; 
                       e.target.className = "w-1/2 h-1/2 object-contain opacity-20";
                     }} 
                   />

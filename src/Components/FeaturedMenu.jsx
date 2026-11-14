@@ -7,19 +7,19 @@ const FeaturedMenu = () => {
       id: 1,
       title: "Signature Cakes",
       description: "Rich, decadent, and crafted to perfection. Experience our premium cake selections like the Fazea.",
-      image: "/cakes.png" 
+      image: "/cakes.webp" 
     },
     {
       id: 2,
       title: "Creamy Puddings",
       description: "Dive into layers of sweetness with our signature laban-based puddings and Koshari bowls.",
-      image: "/puddings.png" 
+      image: "/puddings.webp" 
     },
     {
       id: 3,
       title: "Premium Shakes",
       description: "Thick, dreamy, and blended with your favorite flavors like Lotus, Nutella, and Pistachio.",
-      image: "/shakes.png" 
+      image: "/shakes.webp" 
     }
   ];
 

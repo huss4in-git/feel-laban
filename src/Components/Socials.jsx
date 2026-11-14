@@ -1,10 +1,10 @@
 import React from "react";
 
 const posts = [
-  { img: "IMG_4222.jpg", link: "https://www.instagram.com/p/DMFzbx5SO9t/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
-  { img: "IMG_4223.jpg", link: "https://www.instagram.com/p/DMh3rJ8ycxF/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
+  { img: "IMG_4222.webp", link: "https://www.instagram.com/p/DMFzbx5SO9t/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
+  { img: "IMG_4223.webp", link: "https://www.instagram.com/p/DMh3rJ8ycxF/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
   { img: "IMG_4226.jpeg", link: "https://www.instagram.com/reel/DM3R8zqhBBZ/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
-  { img: "IMG_4225.jpg", link: "https://www.instagram.com/p/DMo5cA8yg6Q/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
+  { img: "IMG_4225.webp", link: "https://www.instagram.com/p/DMo5cA8yg6Q/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
 ];
 
 const InstagramSection = () => (

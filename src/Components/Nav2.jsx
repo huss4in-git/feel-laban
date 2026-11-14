@@ -6,7 +6,7 @@ const Navbar = () => {
       <div className="max-w-8xl mx-auto px-8 py-4 flex items-center">
         <a href="/" className="flex items-center">
           <img
-            src="/f-logo.png"
+            src="/f-logo.webp"
             alt="Logo"
             className="h-30 w-auto cursor-pointer"
           />

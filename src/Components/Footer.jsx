@@ -11,7 +11,7 @@ const Footer = () => {
           {/* Column 1: Logo & Text packed tightly together */}
           <div className="flex flex-col items-start">
             <img 
-              src="Feel Laban - Logo.png" 
+              src="Feel Laban - Logo.webp" 
               alt="Feel Laban" 
               className="w-28 object-contain rounded-md" 
             />
